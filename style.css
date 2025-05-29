@@ -1,0 +1,87 @@
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f0e8;
+    background-image: url('https://i.imgur.com/3DcT08z.png'); /* текстура жатого льна */
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    color: #333;
+}
+
+/* Остальной CSS остаётся как прежде (включен для полной замены) */
+header {
+    background-color: #fff8f0;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #e6dccf;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #8c5e3c;
+}
+
+nav {
+    background-color: #f3ede6;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #6a4e3b;
+    padding: 8px 15px;
+    border: 1px solid #d8cfc4;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ecdccf;
+    color: #4d3629;
+}
+
+section {
+    padding: 20px;
+    background-color: #ffffffd9;
+    margin: 20px auto;
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.category {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+}
+
+.category-item {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    transition: 0.3s ease;
+}
+
+.category-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+footer {
+    background-color: #f2e8da;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    color: #7a6858;
+}
