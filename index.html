@@ -7,115 +7,127 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
       color: #222;
       margin: 0;
       padding: 0;
     }
     header {
-      background-color: #fff;
+      background-color: rgba(255, 255, 255, 0.85);
       padding: 30px 20px;
       text-align: center;
-      border-bottom: 2px solid #ddd;
     }
     header h1 {
-      font-size: 28px;
+      font-size: 26px;
       margin-bottom: 10px;
     }
     header p {
-      font-size: 18px;
-      margin-bottom: 20px;
+      font-size: 17px;
+      margin-bottom: 0;
     }
-    .button {
-      display: inline-block;
-      padding: 12px 20px;
-      background-color: #222;
-      color: #fff;
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+    nav a {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      margin: 5px;
       text-decoration: none;
       border-radius: 5px;
-      font-weight: bold;
+      display: inline-block;
     }
     section {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.88);
+      border-radius: 10px;
     }
     h2 {
       font-size: 22px;
-      margin-bottom: 10px;
+      margin-top: 30px;
     }
     p {
       font-size: 16px;
       line-height: 1.6;
     }
-    .socials {
-      margin-top: 30px;
+    ul {
+      list-style: none;
+      padding: 0;
       text-align: center;
     }
-    .socials a {
-      display: inline-block;
-      margin: 0 10px;
-      font-size: 18px;
-      color: #222;
-      text-decoration: none;
-      border: 1px solid #ddd;
-      padding: 10px 16px;
-      border-radius: 5px;
-      background-color: #fff;
-      transition: background 0.3s;
+    ul li {
+      margin: 10px 0;
     }
-    .socials a:hover {
-      background-color: #eee;
+    ul li a {
+      background-color: #444;
+      color: white;
+      padding: 10px 16px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
     }
     footer {
       text-align: center;
       font-size: 14px;
-      color: #999;
       padding: 30px 0;
+      color: #777;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>TexTrend — ткани, в которых зашита 
-  история</h1>
-    <p>Я сам отбираю ткани на фабриках в 
-    Стамбуле. Проверяю качество, тестирую 
-    и только после этого предлагаю 
-    клиентам.</p>
+    <h1>TexTrend — ткань, в которую впиталась жизнь</h1>
+    <p>Я сам отбираю ткани на фабриках в Стамбуле. Проверяю качество, тестирую и только после этого предлагаю клиентам.</p>
   </header>
 
+  <nav>
+    <a href="#catalog">Каталог тканей</a>
+  </nav>
+
   <section>
-   <h2>Что делает TexTrend по-другому?</h2>
-<p>
-    В отличие от большинства байеров, я не 
-  просто перепродаю то, что дают фабрики.  
-  Каждую ткань я сначала проверяю лично: 
-  покупаю пробный кусок, стираю, тестирую
-   на усадку, прочность, линьку, 
-  скатывание.  
-  Только если материал прошёл мои проверки
-   — я добавляю его в каталог.
-</p>
-<p>
-  Я живу в Стамбуле и подбираю ткани 
-  вручную, под реальные запросы клиентов.  
-  TexTrend — это не просто поставка. 
-  Это подбор, тест и уверенность, что ткань
-   не подведёт.
-</p>
+    <h2>Что делает TexTrend по-другому?</h2>
+    <p>
+      В отличие от большинства байеров, я не просто перепродаю то, что дают фабрики.  
+      Каждую ткань я сначала проверяю лично: покупаю пробный кусок, стираю, тестирую на усадку, прочность, линьку, скатывание.  
+      Только если материал прошёл мои проверки — я добавляю его в каталог.
+    </p>
+    <p>
+      Я живу в Стамбуле и подбираю ткани вручную, под реальные запросы клиентов.  
+      TexTrend — это не просто поставка. Это подбор, тест и уверенность, что ткань не подведёт.
+    </p>
+  </section>
+
+  <section id="catalog">
+    <h2>Каталог тканей</h2>
+    <ul>
+      <li><a href="poplin.html">Поплин</a></li>
+      <li><a href="satin.html">Сатин</a></li>
+      <li><a href="muslin.html">Муслин</a></li>
+      <li><a href="dak.html">Дак</a></li>
+      <li><a href="lace.html">Кружева</a></li>
+      <li><a href="viscose.html">Вискоза</a></li>
+      <li><a href="costume.html">Костюмные ткани</a></li>
+    </ul>
   </section>
 
   <section class="socials">
-  <h2>Мы в соцсетях:</h2>
-  <a class="button" href="https://t.me/textrend" target="_blank">Telegram</a>
-  <a class="button" href="https://www.tiktok.com/@textrend.store" target="_blank">TikTok</a>
-  <a class="button" href="https://wa.me/905436523991" target="_blank">WhatsApp</a>
+    <h2>Мы в соцсетях:</h2>
+    <nav>
+      <a href="https://t.me/textrend" target="_blank">Telegram</a>
+      <a href="https://www.tiktok.com/@textrend.store" target="_blank">TikTok</a>
+      <a href="https://wa.me/905436523991" target="_blank">WhatsApp</a>
+    </nav>
   </section>
 
   <footer>
-    &copy; 2025 TexTrend. Все права защищены.
+    © 2025 TexTrend. Все права защищены.
   </footer>
 
 </body>
