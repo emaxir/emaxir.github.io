@@ -1,134 +1,122 @@
+from pathlib import Path
+import zipfile
+
+# Создание новой структуры сайта TexTrend на HTML
+base_html = """
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TexTrend — ткани из Турции</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-image: url('background.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      color: #222;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: rgba(255, 255, 255, 0.85);
-      padding: 30px 20px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 26px;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 17px;
-      margin-bottom: 0;
-    }
-    nav {
-      text-align: center;
-      margin: 20px 0;
-    }
-    nav a {
-      background-color: #333;
-      color: white;
-      padding: 10px 20px;
-      margin: 5px;
-      text-decoration: none;
-      border-radius: 5px;
-      display: inline-block;
-    }
-    section {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: rgba(255, 255, 255, 0.88);
-      border-radius: 10px;
-    }
-    h2 {
-      font-size: 22px;
-      margin-top: 30px;
-    }
-    p {
-      font-size: 16px;
-      line-height: 1.6;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-      text-align: center;
-    }
-    ul li {
-      margin: 10px 0;
-    }
-    ul li a {
-      background-color: #444;
-      color: white;
-      padding: 10px 16px;
-      text-decoration: none;
-      border-radius: 5px;
-      display: inline-block;
-    }
-    footer {
-      text-align: center;
-      font-size: 14px;
-      padding: 30px 0;
-      color: #777;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TexTrend — твой проводник в мир тканей</title>
+    <style>
+        body {{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }}
+        header {{
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            text-align: center;
+        }}
+        header h1 {{
+            margin: 0;
+        }}
+        .container {{
+            padding: 20px;
+            background-color: rgba(255,255,255,0.95);
+        }}
+        .card {{
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }}
+        .footer {{
+            margin-top: 40px;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9em;
+            color: #555;
+        }}
+        a {{
+            color: #007bff;
+            text-decoration: none;
+        }}
+    </style>
 </head>
 <body>
-
-  <header>
-    <h1>TexTrend — ткань, в которую впиталась жизнь</h1>
-    <p>Я сам отбираю ткани на фабриках в Стамбуле. Проверяю качество, тестирую и только после этого предлагаю клиентам.</p>
-  </header>
-
-  <nav>
-    <a href="#catalog">Каталог тканей</a>
-  </nav>
-
-  <section>
-    <h2>Что делает TexTrend по-другому?</h2>
-    <p>
-      В отличие от большинства байеров, я не просто перепродаю то, что дают фабрики.  
-      Каждую ткань я сначала проверяю лично: покупаю пробный кусок, стираю, тестирую на усадку, прочность, линьку, скатывание.  
-      Только если материал прошёл мои проверки — я добавляю его в каталог.
-    </p>
-    <p>
-      Я живу в Стамбуле и подбираю ткани вручную, под реальные запросы клиентов.  
-      TexTrend — это не просто поставка. Это подбор, тест и уверенность, что ткань не подведёт.
-    </p>
-  </section>
-
-  <section id="catalog">
-    <h2>Каталог тканей</h2>
-    <ul>
-      <li><a href="poplin.html">Поплин</a></li>
-      <li><a href="satin.html">Сатин</a></li>
-      <li><a href="muslin.html">Муслин</a></li>
-      <li><a href="dak.html">Дак</a></li>
-      <li><a href="lace.html">Кружева</a></li>
-      <li><a href="viscose.html">Вискоза</a></li>
-      <li><a href="costume.html">Костюмные ткани</a></li>
-    </ul>
-  </section>
-
-  <section class="socials">
-    <h2>Мы в соцсетях:</h2>
-    <nav>
-      <a href="https://t.me/textrend" target="_blank">Telegram</a>
-      <a href="https://www.tiktok.com/@textrend.store" target="_blank">TikTok</a>
-      <a href="https://wa.me/905436523991" target="_blank">WhatsApp</a>
-    </nav>
-  </section>
-
-  <footer>
-    © 2025 TexTrend. Все права защищены.
-  </footer>
-
+<header>
+    <img src="logo.png" alt="TexTrend Logo" width="120">
+    <h1>TexTrend — твой проводник в мир тканей</h1>
+    <p><a href="https://wa.me/905436523991">Связаться в WhatsApp</a></p>
+</header>
+<div class="container">
+    <h2>Категории тканей</h2>
+    {content}
+</div>
+<div class="footer">
+    &copy; 2025 TexTrend. Все права защищены.
+</div>
 </body>
 </html>
+"""
+
+# Данные карточек
+cards = [
+    {
+        "title": "Хлопковый лён (Duck Keten)",
+        "desc": "Натуральная ткань с водоотталкивающим и грязеотталкивающим эффектом. Отлично подходит для скатертей и сумок.",
+        "url": "https://kumaskumas.com/collections/duck-kumas"
+    },
+    {
+        "title": "Шифон",
+        "desc": "Тонкая, дышащая и полупрозрачная ткань. Идеальна для летней одежды, шарфов, туник и аксессуаров.",
+        "url": "https://kumaskumas.com/collections/sifon-kumaslar"
+    },
+    {
+        "title": "Муслин",
+        "desc": "Мягкая и натуральная ткань, хорошо подходит для детской одежды и пелёнок.",
+        "url": "https://kumaskumas.com/collections/muslin-bezi-kumaslar"
+    },
+    {
+        "title": "Вискоза",
+        "desc": "Лёгкая и приятная к телу ткань с хорошей воздухопроницаемостью. Отличный выбор для летней одежды.",
+        "url": "https://kumaskumas.com/collections/viskon-kumaslar"
+    },
+    {
+        "title": "Сатин",
+        "desc": "Гладкая и блестящая ткань для постельного белья, одежды и декора.",
+        "url": "https://kumaskumas.com/collections/saten-kumas"
+    }
+]
+
+# Генерация контента
+content_html = ""
+for card in cards:
+    content_html += f"""
+    <div class="card">
+        <h3>{card['title']}</h3>
+        <p>{card['desc']}</p>
+        <a href="{card['url']}" target="_blank">Подробнее</a>
+    </div>
+    """
+
+# Вставка в шаблон
+final_html = base_html.format(content=content_html)
+
+# Сохранение как index.html
+output_dir = Path("/mnt/data/textrend_site")
+output_dir.mkdir(parents=True, exist_ok=True)
+index_file = output_dir / "index.html"
+index_file.write_text(final_html, encoding="utf-8")
+
+# Архивирование для загрузки на GitHub
+zip_path = "/mnt/data/textrend_site.zip"
+with zipfile.ZipFile(zip_path, "w") as zipf:
+    zipf.write(index_file, arcname="index.html")
