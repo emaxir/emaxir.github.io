@@ -1,117 +1,132 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TexTrend — твой проводник в мир тканей</title>
-    <style>
-        body {{
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: url('background.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: #333;
-        }}
-        header {{
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            text-align: center;
-        }}
-        header h1 {{
-            margin: 0;
-        }}
-        .container {{
-            padding: 20px;
-            background-color: rgba(255,255,255,0.95);
-        }}
-        .card {{
-            margin-bottom: 20px;
-            padding: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }}
-        .footer {{
-            margin-top: 40px;
-            text-align: center;
-            padding: 10px;
-            font-size: 0.9em;
-            color: #555;
-        }}
-        a {{
-            color: #007bff;
-            text-decoration: none;
-        }}
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TexTrend — твой проводник в мир тканей</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      text-align: center;
+      padding: 100px 20px 60px 20px;
+    }
+    .logo {
+      max-width: 200px;
+      height: auto;
+    }
+    .tagline {
+      color: #fff;
+      font-size: 2em;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+      margin: 20px 0 0 0;
+    }
+    .categories-section {
+      padding: 50px 20px;
+    }
+    .categories-section h2 {
+      text-align: center;
+      color: #fff;
+      text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+      margin: 0 0 30px 0;
+    }
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      margin-top: 0;
+    }
+    .card p {
+      margin: 10px 0;
+    }
+    .card .button {
+      display: inline-block;
+      padding: 8px 16px;
+      background: #3498db;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    .card .button:hover {
+      background: #2980b9;
+    }
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: inline-block;
+      background: #25D366;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 50%;
+      padding: 16px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .whatsapp-button:hover {
+      background: #1ebe5b;
+    }
+    .whatsapp-button svg {
+      vertical-align: middle;
+    }
+  </style>
 </head>
 <body>
-<header>
-    <img src="logo.png" alt="TexTrend Logo" width="120">
-    <h1>TexTrend — твой проводник в мир тканей</h1>
-    <p><a href="https://wa.me/905436523991">Связаться в WhatsApp</a></p>
-</header>
-<div class="container">
+  <!-- Hero Section: Background image, Logo and Tagline -->
+  <header>
+    <img src="logo.png" alt="TexTrend Logo" class="logo">
+    <h1 class="tagline">TexTrend — твой проводник в мир тканей</h1>
+  </header>
+
+  <!-- Fabric Categories Section -->
+  <section class="categories-section">
     <h2>Категории тканей</h2>
-    {content}
-</div>
-<div class="footer">
-    &copy; 2025 TexTrend. Все права защищены.
-</div>
+    <div class="categories">
+      <div class="card">
+        <h3>Хлопковый лён (Duck Keten)</h3>
+        <p>Натуральная ткань с водоотталкивающим и грязеотталкивающим эффектом. Подходит для скатертей и сумок.</p>
+        <a href="https://kumaskumas.com/collections/duck-kumas" target="_blank" rel="noopener" class="button">Подробнее</a>
+      </div>
+      <div class="card">
+        <h3>Шифон</h3>
+        <p>Тонкая, дышащая и полупрозрачная ткань. Идеальна для летней одежды, шарфов, туник и аксессуаров.</p>
+        <a href="https://kumaskumas.com/collections/sifon-kumaslar" target="_blank" rel="noopener" class="button">Подробнее</a>
+      </div>
+      <div class="card">
+        <h3>Муслин</h3>
+        <p>Мягкая и натуральная ткань, хорошо подходит для детской одежды и пелёнок.</p>
+        <a href="https://kumaskumas.com/collections/muslin-bezi-kumaslar" target="_blank" rel="noopener" class="button">Подробнее</a>
+      </div>
+      <div class="card">
+        <h3>Вискоза</h3>
+        <p>Лёгкая и приятная к телу ткань с хорошей воздухопроницаемостью. Отличный выбор для летней одежды.</p>
+        <a href="https://kumaskumas.com/collections/viskon-kumaslar" target="_blank" rel="noopener" class="button">Подробнее</a>
+      </div>
+      <div class="card">
+        <h3>Сатин</h3>
+        <p>Гладкая и блестящая ткань для постельного белья, одежды и декора.</p>
+        <a href="https://kumaskumas.com/collections/saten-kumas" target="_blank" rel="noopener" class="button">Подробнее</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp Contact Button -->
+  <a href="https://wa.me/905436523991" class="whatsapp-button" target="_blank" rel="noopener" aria-label="Написать в WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+      <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+    </svg>
+  </a>
 </body>
 </html>
-"""
-
-# Данные карточек
-cards = [
-    {
-        "title": "Хлопковый лён (Duck Keten)",
-        "desc": "Натуральная ткань с водоотталкивающим и грязеотталкивающим эффектом. Отлично подходит для скатертей и сумок.",
-        "url": "https://kumaskumas.com/collections/duck-kumas"
-    },
-    {
-        "title": "Шифон",
-        "desc": "Тонкая, дышащая и полупрозрачная ткань. Идеальна для летней одежды, шарфов, туник и аксессуаров.",
-        "url": "https://kumaskumas.com/collections/sifon-kumaslar"
-    },
-    {
-        "title": "Муслин",
-        "desc": "Мягкая и натуральная ткань, хорошо подходит для детской одежды и пелёнок.",
-        "url": "https://kumaskumas.com/collections/muslin-bezi-kumaslar"
-    },
-    {
-        "title": "Вискоза",
-        "desc": "Лёгкая и приятная к телу ткань с хорошей воздухопроницаемостью. Отличный выбор для летней одежды.",
-        "url": "https://kumaskumas.com/collections/viskon-kumaslar"
-    },
-    {
-        "title": "Сатин",
-        "desc": "Гладкая и блестящая ткань для постельного белья, одежды и декора.",
-        "url": "https://kumaskumas.com/collections/saten-kumas"
-    }
-]
-
-# Генерация контента
-content_html = ""
-for card in cards:
-    content_html += f"""
-    <div class="card">
-        <h3>{card['title']}</h3>
-        <p>{card['desc']}</p>
-        <a href="{card['url']}" target="_blank">Подробнее</a>
-    </div>
-    """
-
-# Вставка в шаблон
-final_html = base_html.format(content=content_html)
-
-# Сохранение как index.html
-output_dir = Path("/mnt/data/textrend_site")
-output_dir.mkdir(parents=True, exist_ok=True)
-index_file = output_dir / "index.html"
-index_file.write_text(final_html, encoding="utf-8")
-
-# Архивирование для загрузки на GitHub
-zip_path = "/mnt/data/textrend_site.zip"
-with zipfile.ZipFile(zip_path, "w") as zipf:
-    zipf.write(index_file, arcname="index.html")
