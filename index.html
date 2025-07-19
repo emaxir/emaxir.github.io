@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>textrend.store</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggles = document.querySelectorAll('.dropdown-toggle');
+      toggles.forEach(toggle => {
+        toggle.addEventListener('click', function () {
+          const dropdown = this.nextElementSibling;
+          if (dropdown.style.display === 'block') {
+            dropdown.style.display = 'none';
+          } else {
+            dropdown.style.display = 'block';
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body id="top">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo">
+      <a href="/"><img src="assets/images/logo.png" alt="textrend.store"></a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/">Главная</a></li>
+        <li><a href="#">Все товары</a></li>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Частые вопросы</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Category Menu -->
+  <nav class="category-nav">
+    <ul class="categories">
+      <li>
+        <span class="dropdown-toggle">Каталог тканей</span>
+        <ul class="dropdown">
+          <li><a href="poplin.html">Поплин</a></li>
+          <li><a href="satin.html">Сатин</a></li>
+          <li><a href="muslin.html">Муслин</a></li>
+          <li><a href="muslin-4layer.html">Муслин 4 слоя</a></li>
+          <li><a href="muslin-check.html">Муслин клетка</a></li>
+          <li><a href="flanel.html">Фланель</a></li>
+          <li><a href="viscose.html">Вискоза</a></li>
+        </ul>
+      </li>
+      <li>
+        <span class="dropdown-toggle">Фурнитура</span>
+        <ul class="dropdown">
+          <li><a href="furnitura.html">Фурнитура</a></li>
+          <li><a href="katalog-furnitura.html">Каталог фурнитуры</a></li>
+        </ul>
+      </li>
+      <li>
+        <span class="dropdown-toggle">Домашний текстиль</span>
+        <ul class="dropdown">
+          <li><a href="home-textile.html">Текстиль для дома</a></li>
+          <li><a href="katalog-home.html">Каталог Home</a></li>
+        </ul>
+      </li>
+      <li>
+        <span class="dropdown-toggle">Одежда и трикотаж</span>
+        <ul class="dropdown">
+          <li><a href="katalog-odezhda.html">Каталог одежды</a></li>
+          <li><a href="katalog-trikotazh.html">Каталог трикотажа</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</body>
+</html>
