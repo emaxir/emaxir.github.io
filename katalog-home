@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TexTrend — Каталог</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body id="top">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo">
+      <a href="/"><img src="assets/images/logo.png" alt="textrend.store"></a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/">Главная</a></li>
+        <li><a href="all.html">Все товары</a></li>
+        <li><a href="about.html">О нас</a></li>
+        <li><a href="faq.html">Частые вопросы</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Category bar -->
+  <nav class="category-nav">
+    <ul class="categories">
+      <li>
+        <a href="#">Ткани</a>
+        <ul class="dropdown">
+          <li><a href="duck.html">ДАК</a></li>
+          <li><a href="velour.html">Велюр и бархат</a></li>
+          <li><a href="muslin.html">Муслины</a></li>
+          <li><a href="muslin-2layer-crinkled.html">Муслин 2 слоя жатый</a></li>
+          <li><a href="muslin-check.html">Муслин клетка</a></li>
+          <li><a href="viscose.html">Вискоза</a></li>
+          <li><a href="futera.html">Футера</a></li>
+          <li><a href="satin.html">Сатин</a></li>
+          <li><a href="flanel.html">Фланель</a></li>
+          <li><a href="poplin.html">Поплин</a></li>
+          <li><a href="all.html">Все товары</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="category-page">
+      <h1>Каталог тканей</h1>
+      <p>Все 43 позиции каталога:</p>
+      <div class="product-grid">
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 1">
+          <h3>Позиция 1</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 2">
+          <h3>Позиция 2</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 3">
+          <h3>Позиция 3</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 4">
+          <h3>Позиция 4</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 5">
+          <h3>Позиция 5</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 6">
+          <h3>Позиция 6</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 7">
+          <h3>Позиция 7</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 8">
+          <h3>Позиция 8</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 9">
+          <h3>Позиция 9</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 10">
+          <h3>Позиция 10</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 11">
+          <h3>Позиция 11</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 12">
+          <h3>Позиция 12</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 13">
+          <h3>Позиция 13</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 14">
+          <h3>Позиция 14</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 15">
+          <h3>Позиция 15</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 16">
+          <h3>Позиция 16</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 17">
+          <h3>Позиция 17</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 18">
+          <h3>Позиция 18</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 19">
+          <h3>Позиция 19</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 20">
+          <h3>Позиция 20</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 21">
+          <h3>Позиция 21</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 22">
+          <h3>Позиция 22</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 23">
+          <h3>Позиция 23</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 24">
+          <h3>Позиция 24</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 25">
+          <h3>Позиция 25</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 26">
+          <h3>Позиция 26</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 27">
+          <h3>Позиция 27</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 28">
+          <h3>Позиция 28</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 29">
+          <h3>Позиция 29</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 30">
+          <h3>Позиция 30</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 31">
+          <h3>Позиция 31</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 32">
+          <h3>Позиция 32</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 33">
+          <h3>Позиция 33</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 34">
+          <h3>Позиция 34</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 35">
+          <h3>Позиция 35</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 36">
+          <h3>Позиция 36</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 37">
+          <h3>Позиция 37</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 38">
+          <h3>Позиция 38</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 39">
+          <h3>Позиция 39</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 40">
+          <h3>Позиция 40</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 41">
+          <h3>Позиция 41</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 42">
+          <h3>Позиция 42</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/product-placeholder.jpg" alt="Позиция 43">
+          <h3>Позиция 43</h3>
+          <p class="price">xx,xx ₺</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- WhatsApp CTA -->
+  <section class="contact-whatsapp">
+    <h2>Свяжитесь с нами</h2>
+    <a href="https://wa.me/905436523991" class="whatsapp-button" target="_blank" rel="noopener">
+      Напишите нам в WhatsApp
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© textrend.store 2025. Все права защищены.</p>
+    <a href="#top" class="back-to-top">Наверх</a>
+  </footer>
+
+</body>
+</html>
