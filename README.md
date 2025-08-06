@@ -13,7 +13,7 @@ TexTrend — это прямые поставки качественных ту�
 🔗 [https://textrend.store](https://textrend.store)
 
 ## 📱 Связаться с нами
-- [WhatsApp](https://wa.me/905436523991)
+- [WhatsApp](https://wa.me/905471161988)
 - [Telegram](https://t.me/textrend)
 - [TikTok](https://www.tiktok.com/@textrend.store)
 
