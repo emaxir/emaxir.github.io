@@ -18,5 +18,12 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v3
 
-      - name: Run GPT Assistant (simulated)
-        run: echo "ChatGPT will process tasks in prompts/tasks.md"
+      - name: Read task file
+        id: read_file
+        run: |
+          echo "===== Task file content ====="
+          cat prompts/tasks.md || echo "tasks.md not found"
+          echo "============================="
+
+      - name: Done
+        run: echo "🟢 Copilot workflow ran successfully."
