@@ -1,24 +1,40 @@
 name: GPT Copilot Tasks
 
 on:
-  workflow_dispatch:
   push:
     paths:
-      - '**.md'
       - '**.html'
-      - '**.txt'
+      - '**.css'
+      - '.github/workflows/gpt-tasks.yml'
   pull_request:
     paths:
-      - '**.md'
+      - '**.html'
+      - '**.css'
+      - '.github/workflows/gpt-tasks.yml'
 
 jobs:
-  gpt_task_runner:
+  check-code:
+    name: Проверка HTML и CSS
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repo
+      - name: 🧱 Клонирование репозитория
         uses: actions/checkout@v3
 
-      - name: Check files in prompts
-        run: ls -la prompts/
-        shell: bash
+      - name: 🧪 Установка HTMLHint
+        run: npm install -g htmlhint
+
+      - name: 🔍 Проверка HTML-файлов
+        run: htmlhint "**/*.html" || true
+
+      - name: 💅 Установка stylelint
+        run: npm install -g stylelint stylelint-config-standard
+
+      - name: ⚙️ Создание конфига для stylelint
+        run: |
+          echo '{
+            "extends": "stylelint-config-standard"
+          }' > .stylelintrc.json
+
+      - name: 🔍 Проверка CSS
+        run: stylelint "assets/css/*.css" || true
