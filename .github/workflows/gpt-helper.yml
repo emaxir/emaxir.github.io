@@ -5,6 +5,8 @@ on:
   push:
     paths:
       - '**.md'
+      - '**.html'
+      - '**.txt'
   pull_request:
     paths:
       - '**.md'
@@ -12,15 +14,11 @@ on:
 jobs:
   gpt_task_runner:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
 
-      - name: Read task file
-        run: |
-          echo "===== Task file content ====="
-          cat prompts/tasks.md || echo "tasks.md not found"
-          echo "=============================="
-
-      - name: Done
-        run: echo "✅ Copilot workflow ran successfully."
+      - name: Check files in prompts
+        run: ls -la prompts/
+        shell: bash
