@@ -1,0 +1,17 @@
+name: GPT Copilot Tasks
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'prompts/tasks.md'
+
+jobs:
+  gpt_task_runner:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Run GPT Assistant (simulated)
+        run: echo "ChatGPT will process tasks in prompts/tasks.md"
