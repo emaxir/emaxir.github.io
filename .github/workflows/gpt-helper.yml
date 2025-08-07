@@ -5,6 +5,9 @@ on:
   push:
     paths:
       - 'prompts/tasks.md'
+  pull_request:
+    paths:
+      - 'prompts/tasks.md'
 
 jobs:
   gpt_task_runner:
