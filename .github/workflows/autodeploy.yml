@@ -1,0 +1,25 @@
+name: Auto Deploy Site
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'draft/**'
+      - '*.html'
+      - 'assets/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Commit & Push changes
+        run: |
+          git config --global user.name "TexTrend Bot"
+          git config --global user.email "bot@textrend.store"
+          git add .
+          git commit -m "Автозаливка изменений в сайт 🚀" || echo "No changes to commit"
+          git push https://${{ secrets.GH_DEPLOY_TOKEN }}@github.com/emaxir/emaxir.github.io.git HEAD:main
