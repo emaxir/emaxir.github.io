@@ -1,0 +1,70 @@
+[
+  {
+    "id":"poplin-5d-001",
+    "sku":"P5D-001",
+    "name":"Поплин 5D мерсеризованный «Эвкалипт»",
+    "category":"Поплин",
+    "print":"Цифровая",
+    "composition":"100% хлопок",
+    "width_cm":240,
+    "price_usd":3.9,
+    "images":["/assets/poplin-5d-001.jpg"],
+    "tags":["постельное","мягкий","без усадки"]
+  },
+  {
+    "id":"satin-300tc-ivory",
+    "sku":"SAT-300TC-IV",
+    "name":"Сатин мерсеризованный 300TC — Айвори",
+    "category":"Сатин",
+    "print":"Однотон",
+    "composition":"100% хлопок",
+    "width_cm":280,
+    "price_usd":5.7,
+    "images":["/assets/satin-300tc-ivory.jpg"],
+    "tags":["премиум"]
+  },
+  {
+    "id":"muslin-4l-white",
+    "sku":"MSL-4L-WHT",
+    "name":"Муслин 4-слойный — Белый",
+    "category":"Муслин",
+    "print":"Однотон",
+    "composition":"100% хлопок",
+    "width_cm":250,
+    "price_usd":6.2,
+    "images":["/assets/muslin-4l-white.jpg"]
+  },
+  {
+    "id":"pike-lacoste-beige",
+    "sku":"PIK-LAC-BE",
+    "name":"Пике (Lacoste) — Беж",
+    "category":"Пике",
+    "print":"Однотон",
+    "composition":"100% хлопок",
+    "width_cm":240,
+    "price_usd":6.0,
+    "images":["/assets/pike-lacoste-beige.jpg"]
+  },
+  {
+    "id":"duck-teflon-olive",
+    "sku":"DUK-TF-OLV",
+    "name":"Дак с тефлоновым покрытием — Олива",
+    "category":"Дак",
+    "print":"Однотон",
+    "composition":"65/35 хлопок/полиэстер",
+    "width_cm":280,
+    "price_usd":4.8,
+    "images":["/assets/duck-olive.jpg"]
+  },
+  {
+    "id":"denim-womens-10oz",
+    "sku":"DNM-W-10",
+    "name":"Джинса женская 10oz — Индиго",
+    "category":"Деним",
+    "print":"Однотон",
+    "composition":"Хлопок с эластаном",
+    "width_cm":150,
+    "price_usd":5.2,
+    "images":["/assets/denim-10oz.jpg"]
+  }
+]
