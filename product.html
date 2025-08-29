@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Товар — TexTrend</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .wrap{max-width:980px;margin:0 auto;padding:14px}
+    .prod{display:grid;grid-template-columns:1.2fr 1fr;gap:16px}
+    .prod img{width:100%;border-radius:16px;border:1px solid #eee;object-fit:cover;max-height:440px}
+    @media (max-width:900px){.prod{grid-template-columns:1fr}}
+    .swatches{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+    .sw{display:flex;align-items:center;gap:8px;border:1px solid #ddd;border-radius:999px;padding:6px 10px;background:#fff;cursor:pointer}
+    .dot{width:14px;height:14px;border-radius:50%;border:1px solid #ccc}
+    .sw.active{outline:2px solid #0f766e}
+    .muted{color:#6b7280}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html" style="text-decoration:none;color:inherit">← TexTrend</a></div>
+    <a class="wa" id="waTop" target="_blank" rel="noopener">WhatsApp</a>
+  </header>
+
+  <div class="wrap">
+    <div id="content"></div>
+  </div>
+
+  <script>
+  const WA = "https://wa.me/905471161988";
+  const params = new URLSearchParams(location.search);
+  const id = params.get("id");
+
+  const $ = (s)=>document.querySelector(s);
+
+  let PRODUCT=null, VAR=null;
+
+  async function boot(){
+    const res = await fetch("products.json?ts="+Date.now());
+    const list = await res.json();
+    PRODUCT = list.find(p=>p.id===id);
+    if(!PRODUCT){ $("#content").innerHTML = "<p>Товар не найден.</p>"; return; }
+    // выберем первый вариант по умолчанию
+    VAR = (PRODUCT.variants && PRODUCT.variants[0]) || null;
+    render();
+  }
+
+  function waLink(){
+    const v = VAR ? `Цвет: ${VAR.color}\n` : "";
+    const img = VAR?.image || (PRODUCT.images && PRODUCT.images[0]) || "";
+    const msg = encodeURIComponent(
+      `Здравствуйте! Хочу заказать:\n`+
+      `• ${PRODUCT.name}\n`+
+      (VAR?.sku?`• SKU: ${VAR.sku}\n`:"")+
+      (PRODUCT.width_cm?`• Ширина: ${PRODUCT.width_cm} см\n`:"")+
+      (PRODUCT.composition?`• Состав: ${PRODUCT.composition}\n`:"")+
+      v+
+      `• Цена: $${PRODUCT.price_usd} / м\n`+
+      `• Кол-во: ___ м\n`+
+      (img?`Фото: ${location.origin}${img}\n`:"")
+    );
+    return WA+"?text="+msg;
+  }
+
+  function render(){
+    const img = VAR?.image || (PRODUCT.images && PRODUCT.images[0]) || "/assets/placeholder.jpg";
+    const swatches = (PRODUCT.variants||[]).map(v=>`
+      <button class="sw ${VAR&&VAR.color===v.color?'active':''}" onclick='selectVariant("${v.color}")'>
+        <span class="dot" style="background:${v.hex||"#fff"}"></span>${v.color}
+      </button>
+    `).join("");
+
+    $("#content").innerHTML = `
+      <div class="prod">
+        <div><img src="${img}" alt="${PRODUCT.name}"></div>
+        <div>
+          <h1 style="margin:6px 0">${PRODUCT.name}</h1>
+          <div class="muted" style="margin-bottom:6px">
+            ${PRODUCT.category||""} • ${PRODUCT.composition||""} • ${PRODUCT.width_cm?PRODUCT.width_cm+" см":""}
+          </div>
+          <div class="price" style="font-size:22px;margin:8px 0">$${PRODUCT.price_usd} / м</div>
+
+          ${(PRODUCT.variants && PRODUCT.variants.length)?`
+            <div style="margin:8px 0 4px">Выберите цвет:</div>
+            <div class="swatches">${swatches}</div>
+          `:""}
+
+          <div class="actions" style="margin-top:14px">
+            <a class="btn" href="${img}" target="_blank" rel="noopener">Фото</a>
+            <a class="btn primary" id="waBtn" target="_blank" rel="noopener">Заказать в WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    `;
+    $("#waBtn").href = waLink();
+    $("#waTop").href = waLink();
+  }
+
+  window.selectVariant = function(color){
+    VAR = (PRODUCT.variants||[]).find(v=>v.color===color);
+    render();
+  }
+
+  boot();
+  </script>
+</body>
+</html>
