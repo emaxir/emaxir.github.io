@@ -1,22 +1,46 @@
 <!doctype html>
 <html lang="ru">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>TexTrend — тестовый маяк</title>
-<style>
-  body{margin:0;min-height:100svh;display:grid;place-items:center;
-       font:600 20px/1.4 -apple-system,system-ui,Segoe UI,Roboto;background:#faf7f2;color:#111}
-  .card{background:#fff;border:1px solid #eee;border-radius:16px;padding:24px 20px;text-align:center;max-width:520px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
-  .ok{font-size:28px;margin-bottom:6px}
-  a{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:12px;background:#0f766e;color:#fff;text-decoration:none}
-  small{display:block;margin-top:8px;color:#666;font-weight:500}
-</style>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TexTrend — каталог тканей (USD)</title>
+  <meta name="description" content="TexTrend — твой проводник в мир тканей. Опт и отрез. Поплин, Сатин, Муслин, Пике, Дак, Деним. Быстрые заказы в WhatsApp."/>
+  <link rel="stylesheet" href="styles.css" />
+</head>
 <body>
-  <div class="card">
-    <div class="ok">✅ TexTrend работает</div>
-    Домашняя страница отдается с GitHub Pages.
-    <a href="https://wa.me/905471161988" target="_blank" rel="noopener">Жми сюда → WhatsApp</a>
-    <small>Время сборки: <!--TS-->2025-08-29<!--/TS--></small>
-  </div>
+  <header>
+    <div class="logo">TexTrend</div>
+    <a class="wa" href="https://wa.me/905471161988" target="_blank" rel="noopener">Жми сюда → WhatsApp</a>
+  </header>
+
+  <section class="hero">
+    <h1>Каталог тканей</h1>
+    <div style="color:#6b7280;margin-top:6px">Цены в USD • Быстрая отгрузка • Индивидуальные принты</div>
+  </section>
+
+  <section class="filters">
+    <input id="search" type="search" placeholder="Поиск: сатин 300ТС, ширина 280…">
+    <select id="category">
+      <option value="">Все категории</option>
+      <option>Поплин</option><option>Сатин</option><option>Муслин</option>
+      <option>Пике</option><option>Дак</option><option>Деним</option>
+    </select>
+    <select id="composition">
+      <option value="">Любой состав</option>
+      <option>100% хлопок</option><option>65/35 хлопок/полиэстер</option><option>Хлопок с эластаном</option>
+    </select>
+    <select id="print">
+      <option value="">Любой тип печати</option>
+      <option>Цифровая</option><option>Ротация</option><option>Однотон</option>
+    </select>
+  </section>
+
+  <section class="grid" id="grid"></section>
+
+  <footer>
+    © TexTrend • Цены в USD • <a href="https://t.me/textrend" target="_blank" rel="noopener">Telegram</a> • <a href="https://www.tiktok.com/@textrend.store" target="_blank" rel="noopener">TikTok</a>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
