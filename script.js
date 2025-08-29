@@ -43,12 +43,13 @@ function card(p){
         ${p.composition? `<span class="badge">${p.composition}</span>`:""}
         ${p.width_cm? `<span class="badge">${p.width_cm} см</span>`:""}
         ${p.category? `<span class="badge">${p.category}</span>`:""}
+        ${p.variants? `<span class="badge">${p.variants.length} цвета</span>`:""}
       </div>
       <h3 style="margin:2px 0 6px">${p.name}</h3>
       <div class="price">$${p.price_usd} / м</div>
       <div class="actions">
-        <a class="btn" href="${p.images?.[0]||'#'}" target="_blank" rel="noopener">Фото</a>
-        <a class="btn primary" href="${WA}?text=${msg}" target="_blank" rel="noopener">Заказать в WhatsApp</a>
+        <a class="btn" href="product.html?id=${p.id}">Подробнее</a>
+        <a class="btn primary" href="${WA}?text=${msg}" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
   </article>`;
