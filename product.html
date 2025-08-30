@@ -1,96 +1,151 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Товар — TexTrend</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Товар • TexTrend</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="/styles.css">
+<style>
+  .wrap{max-width:1100px;margin:0 auto;padding:16px}
+  .breadcrumbs{font-size:14px;color:#777;margin:8px 0 16px}
+  .grid{display:grid;grid-template-columns:1fr;gap:18px}
+  @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+  .mainimg{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px;background:#f2f2f2}
+  .thumbs{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .thumb{width:70px;height:70px;border-radius:10px;overflow:hidden;border:2px solid transparent;cursor:pointer;background:#f6f6f6}
+  .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .thumb.active{border-color:#0b766d}
+  .title{font-size:28px;font-weight:800;margin:4px 0 10px}
+  .badges{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 16px}
+  .badge{background:#eef3f3;border:1px solid #dfe9e8;border-radius:999px;padding:6px 10px;font-size:12px;color:#2b3b3b}
+  .price{font-size:22px;font-weight:700;margin:6px 0 16px}
+  .muted{color:#6b7280}
+  .section-title{font-weight:700;margin:16px 0 8px}
+  .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+  .btn{display:inline-block;border-radius:10px;padding:10px 14px;border:1px solid #d5e3e2;text-decoration:none}
+  .btn.primary{background:#0b766d;border-color:#0b766d;color:#fff}
+  .note{font-size:13px;color:#6b7280;margin-top:6px}
+</style>
 </head>
 <body>
-  <header>
-    <div class="logo"><a href="index.html" style="text-decoration:none;color:inherit">← TexTrend</a></div>
-    <a class="wa" id="waTop" target="_blank" rel="noopener">WhatsApp</a>
-  </header>
-
-  <div class="wrap">
-    <div id="content"></div>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="/">TexTrend</a>
+    <a class="btn primary" id="waTop" href="#" target="_blank" rel="noopener">Жми сюда → WhatsApp</a>
   </div>
+</header>
 
-  <script>
-  const WA = "https://wa.me/905471161988";
-  const params = new URLSearchParams(location.search);
-  const id = params.get("id");
-  const $ = (s)=>document.querySelector(s);
+<main class="wrap">
+  <div class="breadcrumbs"><a href="/">Каталог</a> • <span id="bcName">Товар</span></div>
+  <div class="grid">
+    <section>
+      <img id="mainImg" class="mainimg" alt="" onerror="this.onerror=null;this.src='/assets/placeholder.jpg'">
+      <div id="thumbs" class="thumbs"></div>
+    </section>
+    <section>
+      <div id="title" class="title"></div>
+      <div id="badges" class="badges"></div>
+      <div id="price" class="price"></div>
 
-  let PRODUCT=null, VAR=null;
+      <div class="section-title">Описание</div>
+      <div id="desc" class="muted"></div>
 
-  async function boot(){
-    const res = await fetch("products.json?ts="+Date.now());
-    const list = await res.json();
-    PRODUCT = list.find(p=>p.id===id);
-    if(!PRODUCT){ $("#content").innerHTML = "<p>Товар не найден.</p>"; return; }
-    VAR = (PRODUCT.variants && PRODUCT.variants[0]) || null;
-    render();
-  }
-
-  function waLink(){
-    const v = VAR ? `Цвет/вариант: ${VAR.color||"—"}\n` : "";
-    const img = VAR?.image || (PRODUCT.images && PRODUCT.images[0]) || "";
-    const msg = encodeURIComponent(
-      `Здравствуйте! Хочу заказать:\n`+
-      `• ${PRODUCT.name}\n`+
-      (VAR?.sku?`• SKU: ${VAR.sku}\n`:"")+
-      (PRODUCT.width_cm?`• Ширина: ${PRODUCT.width_cm} см\n`:"")+
-      (PRODUCT.composition?`• Состав: ${PRODUCT.composition}\n`:"")+
-      v+
-      `• Цена: $${PRODUCT.price_usd} / м\n• Кол-во: ___ м\n`+
-      (img?`Фото: ${location.origin}${img}\n`:"")
-    );
-    return WA+"?text="+msg;
-  }
-
-  function render(){
-    const img = VAR?.image || (PRODUCT.images && PRODUCT.images[0]) || "/assets/placeholder.jpg";
-    const thumbs = (PRODUCT.variants||[])
-      .map((v,i)=>`
-        <button class="thumb" aria-selected="${VAR&&VAR.image===v.image}" onclick="selectVariant(${i})" title="${v.color||''}">
-          <img src="${v.image}" alt="${v.color||('Вариант '+(i+1))}">
-        </button>
-      `).join("");
-
-    $("#content").innerHTML = `
-      <div class="prod">
-        <div class="prod__img">
-          <img id="mainImg" src="${img}" alt="${PRODUCT.name}">
-          ${(PRODUCT.variants&&PRODUCT.variants.length)?`<div class="thumbs">${thumbs}</div>`:""}
-        </div>
-
-        <div>
-          <h1 style="margin:6px 0">${PRODUCT.name}</h1>
-          <div class="muted" style="margin-bottom:6px">
-            ${(PRODUCT.category||"")}${PRODUCT.kind? " • "+PRODUCT.kind:""}${PRODUCT.print? " • "+PRODUCT.print:""}${PRODUCT.composition? " • "+PRODUCT.composition:""}${PRODUCT.width_cm? " • "+PRODUCT.width_cm+" см":""}
-          </div>
-          <div class="price" style="font-size:22px;margin:8px 0">$${PRODUCT.price_usd} / м</div>
-
-          <div class="actions" style="margin-top:14px">
-            <a class="btn" href="${img}" target="_blank" rel="noopener">Открыть фото</a>
-            <a class="btn primary" id="waBtn" target="_blank" rel="noopener">Заказать в WhatsApp</a>
-          </div>
-        </div>
+      <div id="variantsBlock" style="display:none">
+        <div class="section-title">Цвета / варианты</div>
+        <div id="variantThumbs" class="thumbs"></div>
       </div>
-    `;
-    $("#waBtn").href  = waLink();
-    $("#waTop").href  = waLink();
-  }
 
-  window.selectVariant = function(i){
-    const arr = PRODUCT.variants||[];
-    VAR = arr[i] || null;
-    render();
-    document.getElementById("mainImg")?.scrollIntoView({block:"center",behavior:"smooth"});
-  };
+      <div class="actions">
+        <a id="waBtn" class="btn primary" href="#" target="_blank" rel="noopener">Заказать в WhatsApp</a>
+        <a class="btn" href="/">← Вернуться в каталог</a>
+      </div>
+      <div class="note">Цены в USD. Быстрая отгрузка из Турции. Индивидуальные принты по запросу.</div>
+    </section>
+  </div>
+</main>
 
-  boot();
-  </script>
+<footer class="footer">
+  <div class="wrap muted">© TexTrend • Цены в USD • <a href="https://t.me/" target="_blank">Telegram</a> • <a href="https://tiktok.com/" target="_blank">TikTok</a></div>
+</footer>
+
+<script>
+const WA = "https://wa.me/905471161988";
+const qs = new URLSearchParams(location.search);
+const id = qs.get("id");
+let PRODUCT = null, currentImage = null, currentVariant = null;
+
+function $(s){return document.querySelector(s);}
+function el(html){const t=document.createElement('template');t.innerHTML=html.trim();return t.content.firstChild;}
+
+async function boot(){
+  try{
+    const res = await fetch("/products.json?ts="+Date.now());
+    const list = await res.json();
+    PRODUCT = list.find(p => p.id === id) || null;
+    if(!PRODUCT){ renderNotFound(); return; }
+
+    // Автоподстановка фото по id, если images отсутствует
+    if(!PRODUCT.images || !PRODUCT.images.length){
+      PRODUCT.images = [`/assets/img/${PRODUCT.id}.jpg`];
+    }
+    renderProduct();
+  }catch(e){ renderError(e); }
+}
+function renderNotFound(){ $("#title").textContent="Товар не найден"; $("#desc").textContent="Проверьте ссылку."; document.querySelector(".actions").style.display="none"; }
+function renderError(err){ $("#title").textContent="Ошибка загрузки"; $("#desc").textContent=err?.message||"Не удалось загрузить данные"; }
+
+function renderProduct(){
+  $("#title").textContent = PRODUCT.name || PRODUCT.id;
+  $("#bcName").textContent = PRODUCT.name || PRODUCT.id;
+
+  const b = [];
+  if(PRODUCT.category) b.push(`<span class="badge">${PRODUCT.category}</span>`);
+  if(PRODUCT.kind) b.push(`<span class="badge">${PRODUCT.kind}</span>`);
+  if(PRODUCT.print) b.push(`<span class="badge">${PRODUCT.print}</span>`);
+  if(PRODUCT.composition) b.push(`<span class="badge">${PRODUCT.composition}</span>`);
+  if(PRODUCT.width_cm) b.push(`<span class="badge">${PRODUCT.width_cm} см</span>`);
+  if(PRODUCT.variants?.length) b.push(`<span class="badge">${PRODUCT.variants.length} цвета</span>`);
+  $("#badges").innerHTML = b.join("");
+  $("#price").textContent = PRODUCT.price_usd ? ("$"+PRODUCT.price_usd+" / м") : "";
+  $("#desc").textContent = PRODUCT.description || "Качественная ткань для домашнего текстиля и одежды.";
+
+  const imgs = [...(PRODUCT.images||[])];
+  const mainImgEl = $("#mainImg");
+  currentImage = imgs[0] || "/assets/placeholder.jpg";
+  mainImgEl.src = currentImage;
+  mainImgEl.alt = PRODUCT.name || PRODUCT.id;
+
+  const thumbs = $("#thumbs"); thumbs.innerHTML="";
+  imgs.forEach((src,i)=>{
+    const t = el(`<div class="thumb${i===0?' active':''}"><img alt="" onerror="this.onerror=null;this.src='/assets/placeholder.jpg'"></div>`);
+    t.querySelector("img").src = src;
+    t.addEventListener("click", ()=>{
+      currentImage = src; mainImgEl.src = src;
+      [...thumbs.children].forEach(x=>x.classList.remove("active")); t.classList.add("active"); updateWA();
+    });
+    thumbs.appendChild(t);
+  });
+
+  $("#waBtn").href = buildWA();
+  $("#waTop").href = buildWA();
+}
+function buildWA(){
+  const lines = [];
+  lines.push("Здравствуйте! Хочу заказать:");
+  lines.push("• " + (PRODUCT.name || PRODUCT.id));
+  if(currentVariant?.color) lines.push("• Цвет: " + currentVariant.color);
+  if(PRODUCT.sku) lines.push("• SKU: " + PRODUCT.sku);
+  if(PRODUCT.width_cm) lines.push("• Ширина: " + PRODUCT.width_cm + " см");
+  if(PRODUCT.composition) lines.push("• Состав: " + PRODUCT.composition);
+  if(PRODUCT.price_usd) lines.push("• Цена: $" + PRODUCT.price_usd + " / м");
+  lines.push("• Кол-во: ___ м");
+  if(currentImage) lines.push("Фото: " + location.origin + currentImage);
+  return WA + "?text=" + encodeURIComponent(lines.join("\n"));
+}
+function updateWA(){ const href = buildWA(); $("#waBtn").href = href; $("#waTop").href = href; }
+
+document.addEventListener("DOMContentLoaded", boot);
+</script>
 </body>
 </html>
