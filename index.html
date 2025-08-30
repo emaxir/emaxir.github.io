@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>TexTrend — каталог тканей (USD)</title>
-  <meta name="description" content="TexTrend — твой проводник в мир тканей. Опт и отрез. Поплин, Сатин, Муслин, Пике, Дак, Деним. Быстрые заказы в WhatsApp."/>
+  <meta name="description" content="TexTrend — ткани из Турции: Муслин, Поплин, Сатин, Фланель, Дак, Линенс. Опт и отрез. Быстрые заказы в WhatsApp."/>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -18,27 +18,44 @@
     <div style="color:#6b7280;margin-top:6px">Цены в USD • Быстрая отгрузка • Индивидуальные принты</div>
   </section>
 
+  <!-- Быстрые ссылки по категориям -->
+  <section style="padding:0 14px 10px;display:flex;flex-wrap:wrap;gap:8px">
+    <a class="btn" href="?cat=Муслин">Муслин</a>
+    <a class="btn" href="?cat=Поплин">Поплин</a>
+    <a class="btn" href="?cat=Сатин">Сатин</a>
+    <a class="btn" href="?cat=Фланель">Фланель</a>
+    <a class="btn" href="?cat=Дак">Дак</a>
+    <a class="btn" href="?cat=Линенс">Линенс</a>
+  </section>
+
   <section class="filters">
     <input id="search" type="search" placeholder="Поиск: сатин 300ТС, ширина 280…">
     <select id="category">
       <option value="">Все категории</option>
-      <option>Поплин</option><option>Сатин</option><option>Муслин</option>
-      <option>Пике</option><option>Дак</option><option>Деним</option>
+      <option>Муслин</option><option>Поплин</option><option>Сатин</option>
+      <option>Фланель</option><option>Дак</option><option>Линенс</option>
     </select>
     <select id="composition">
       <option value="">Любой состав</option>
-      <option>100% хлопок</option><option>65/35 хлопок/полиэстер</option><option>Хлопок с эластаном</option>
+      <option>100% хлопок</option>
+      <option>65/35 хлопок/полиэстер</option>
+      <option>Хлопок/Лён</option>
+      <option>Хлопок/Вискоза (лиоцел)</option>
+      <option>100% полиэстер</option>
     </select>
     <select id="print">
-      <option value="">Любой тип печати</option>
-      <option>Цифровая</option><option>Ротация</option><option>Однотон</option>
+      <option value="">Любая печать</option>
+      <option>Однотон</option><option>Ротация</option><option>Цифровая</option>
+      <option>Жаккард</option><option>Полоска</option><option>Декор</option>
     </select>
   </section>
 
   <section class="grid" id="grid"></section>
 
   <footer>
-    © TexTrend • Цены в USD • <a href="https://t.me/textrend" target="_blank" rel="noopener">Telegram</a> • <a href="https://www.tiktok.com/@textrend.store" target="_blank" rel="noopener">TikTok</a>
+    © TexTrend • Цены в USD •
+    <a href="https://t.me/textrend" target="_blank" rel="noopener">Telegram</a> •
+    <a href="https://www.tiktok.com/@textrend.store" target="_blank" rel="noopener">TikTok</a>
   </footer>
 
   <script src="script.js" defer></script>
