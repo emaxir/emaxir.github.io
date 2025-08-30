@@ -5,18 +5,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Товар — TexTrend</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    .wrap{max-width:980px;margin:0 auto;padding:14px}
-    .prod{display:grid;grid-template-columns:1.2fr 1fr;gap:16px}
-    .prod__img{position:relative}
-    .prod__img img{width:100%;border-radius:16px;border:1px solid #eee;object-fit:cover;max-height:480px}
-    .thumbs{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .thumb{border:1px solid #ddd;border-radius:12px;overflow:hidden;width:64px;height:64px;padding:0;background:#fff;cursor:pointer}
-    .thumb img{width:100%;height:100%;object-fit:cover;display:block}
-    .thumb[aria-selected="true"]{outline:2px solid #0f766e}
-    .muted{color:#6b7280}
-    @media (max-width:900px){.prod{grid-template-columns:1fr}}
-  </style>
 </head>
 <body>
   <header>
@@ -41,7 +29,6 @@
     const list = await res.json();
     PRODUCT = list.find(p=>p.id===id);
     if(!PRODUCT){ $("#content").innerHTML = "<p>Товар не найден.</p>"; return; }
-    // по умолчанию – первый вариант (если есть)
     VAR = (PRODUCT.variants && PRODUCT.variants[0]) || null;
     render();
   }
@@ -81,7 +68,7 @@
         <div>
           <h1 style="margin:6px 0">${PRODUCT.name}</h1>
           <div class="muted" style="margin-bottom:6px">
-            ${PRODUCT.category||""} • ${PRODUCT.composition||""} • ${PRODUCT.width_cm?PRODUCT.width_cm+" см":""}
+            ${(PRODUCT.category||"")}${PRODUCT.kind? " • "+PRODUCT.kind:""}${PRODUCT.print? " • "+PRODUCT.print:""}${PRODUCT.composition? " • "+PRODUCT.composition:""}${PRODUCT.width_cm? " • "+PRODUCT.width_cm+" см":""}
           </div>
           <div class="price" style="font-size:22px;margin:8px 0">$${PRODUCT.price_usd} / м</div>
 
@@ -96,12 +83,10 @@
     $("#waTop").href  = waLink();
   }
 
-  // выбор варианта по миниатюре
   window.selectVariant = function(i){
     const arr = PRODUCT.variants||[];
     VAR = arr[i] || null;
     render();
-    // прокрутить к началу фото на мобильных
     document.getElementById("mainImg")?.scrollIntoView({block:"center",behavior:"smooth"});
   };
 
