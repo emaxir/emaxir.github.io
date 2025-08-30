@@ -5,39 +5,75 @@ document.addEventListener("DOMContentLoaded", () => {
   const $grid = $("#grid");
   const $search = $("#search");
   const $cat = $("#category");
-  const $comp = $("#composition");
+  const $kind = $("#kind");
   const $print = $("#print");
   if (!$grid) return;
 
   const params = new URLSearchParams(location.search);
-  if ($cat && params.get("cat")) $cat.value = params.get("cat");
-  if ($comp && params.get("comp")) $comp.value = params.get("comp");
-  if ($print && params.get("print")) $print.value = params.get("print");
-  if ($search && params.get("q")) $search.value = params.get("q");
+  // значения из URL (часть применим позже, после загрузки ассортимента)
+  const initialCat   = params.get("cat")   || "";
+  const initialKind  = params.get("kind")  || "";
+  const initialPrint = params.get("print") || "";
+  const initialQ     = params.get("q")     || "";
+
+  if ($cat && initialCat)   $cat.value = initialCat;
+  if ($print && initialPrint) $print.value = initialPrint;
+  if ($search && initialQ)  $search.value = initialQ;
 
   let PRODUCTS = [];
 
   fetch("products.json?ts=" + Date.now())
     .then(r => r.json())
-    .then(data => { PRODUCTS = data; render(); })
+    .then(data => {
+      PRODUCTS = Array.isArray(data) ? data : [];
+      populateKindOptions(PRODUCTS);
+      // применим kind из URL после заполнения списка
+      if ($kind && initialKind) $kind.value = initialKind;
+      render();
+    })
     .catch(err => {
       console.error(err);
       $grid.innerHTML = `<div style="grid-column:1/-1;color:#b91c1c;padding:20px">Ошибка загрузки каталога.</div>`;
     });
 
+  function unique(values){
+    return [...new Set(values.filter(Boolean))];
+  }
+
+  function populateKindOptions(items){
+    if(!$kind) return;
+    const kinds = unique(items.map(p=> (p.kind||"").trim()));
+    // Если есть выбранная категория — ограничим типы этой категорией (удобнее)
+    const catVal = ($cat?.value || "").trim();
+    const filteredKinds = catVal ? unique(items.filter(p=> (p.category||"")===catVal).map(p=> p.kind||"")) : kinds;
+    const options = ['<option value="">Любой тип</option>']
+      .concat(filteredKinds.map(k=> `<option>${escapeHtml(k)}</option>`))
+      .join("");
+    $kind.innerHTML = options;
+  }
+
+  function escapeHtml(str){
+    return String(str||"").replace(/[&<>"']/g, s => ({
+      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+    })[s]);
+  }
+
   function render(){
+    // если пользователь сменил категорию — обновим доступные типы (kind)
+    populateKindOptions(PRODUCTS);
+
     const term = ($search?.value || "").toLowerCase();
     const cat  = ($cat?.value || "");
-    const comp = ($comp?.value || "");
+    const kind = ($kind?.value || "");
     const prn  = ($print?.value || "");
 
     const list = PRODUCTS.filter(p => {
       const hay = [p.name, p.category, p.kind, p.print, p.composition, p.width_cm, (p.tags||[]).join(" ")].join(" ").toLowerCase();
-      const okT    = term ? hay.includes(term) : true;
-      const okC    = cat  ? (p.category||"").toLowerCase().includes(cat.toLowerCase()) : true;
-      const okComp = comp ? (p.composition||"").toLowerCase() === comp.toLowerCase() : true;
-      const okPrn  = prn  ? (p.print||"").toLowerCase() === prn.toLowerCase() : true;
-      return okT && okC && okComp && okPrn;
+      const okT   = term ? hay.includes(term) : true;
+      const okC   = cat  ? (p.category||"").toLowerCase().includes(cat.toLowerCase()) : true;
+      const okK   = kind ? (p.kind||"").toLowerCase() === kind.toLowerCase() : true;
+      const okPrn = prn  ? (p.print||"").toLowerCase() === prn.toLowerCase() : true;
+      return okT && okC && okK && okPrn;
     });
 
     $grid.innerHTML = list.map(card).join("") ||
@@ -63,11 +99,11 @@ document.addEventListener("DOMContentLoaded", () => {
         <img alt="${p.name}" loading="lazy" src="${img}" onclick="location.href='product.html?id=${p.id}'" style="cursor:pointer">
         <div class="pad">
           <div class="badges">
+            ${p.category? `<span class="badge">${p.category}</span>`:""}
+            ${p.kind? `<span class="badge">${p.kind}</span>`:""}
             ${p.print? `<span class="badge">${p.print}</span>`:""}
             ${p.composition? `<span class="badge">${p.composition}</span>`:""}
             ${p.width_cm? `<span class="badge">${p.width_cm} см</span>`:""}
-            ${p.category? `<span class="badge">${p.category}</span>`:""}
-            ${p.kind? `<span class="badge">${p.kind}</span>`:""}
             ${colorsBadge}
           </div>
           <h3 style="margin:2px 0 6px">${p.name}</h3>
@@ -80,5 +116,6 @@ document.addEventListener("DOMContentLoaded", () => {
       </article>`;
   }
 
-  [$search, $cat, $comp, $print].filter(Boolean).forEach(el => el.addEventListener("input", render));
+  // Обработчики (если элементы есть)
+  [$search, $cat, $kind, $print].filter(Boolean).forEach(el => el.addEventListener("input", render));
 });
