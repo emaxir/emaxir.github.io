@@ -8,7 +8,7 @@
     "composition":"100% хлопок",
     "width_cm":240,
     "price_usd":3.9,
-    "images":["/assets/poplin-5d-001.jpg"],
+    "images":["/assets/placeholder.jpg"],
     "tags":["постельное","мягкий","без усадки"]
   },
   {
@@ -20,33 +20,23 @@
     "composition":"100% хлопок",
     "width_cm":280,
     "price_usd":5.7,
-    "images":["/assets/satin-300tc-ivory.jpg"],
+    "images":["/assets/placeholder.jpg"],
     "tags":["премиум"]
   },
   {
-  "id": "muslin-4l",
-  "name": "Муслин 4-слойный",
-  "category": "Муслин",
-  "composition": "100% хлопок",
-  "width_cm": 250,
-  "price_usd": 6.2,
-  "print": "Однотон",
-  "images": ["/assets/muslin-4l-white.jpg"],
-  "variants": [
-    {
-      "color": "Белый",
-      "sku": "MSL-4L-WHT",
-      "image": "/assets/muslin-4l-white.jpg",
-      "hex": "#ffffff"
-    },
-    {
-      "color": "Голубой",
-      "sku": "MSL-4L-BLU",
-      "image": "/assets/muslin-4l-blue.jpg",
-      "hex": "#8ec5ff"
-    }
-  ]
-}
+    "id":"muslin-4l",
+    "name":"Муслин 4-слойный",
+    "category":"Муслин",
+    "print":"Однотон",
+    "composition":"100% хлопок",
+    "width_cm":250,
+    "price_usd":6.2,
+    "images":["/assets/placeholder.jpg"],
+    "variants": [
+      {"color":"Белый","sku":"MSL-4L-WHT","image":"/assets/placeholder.jpg","hex":"#ffffff"},
+      {"color":"Голубой","sku":"MSL-4L-BLU","image":"/assets/placeholder.jpg","hex":"#8ec5ff"}
+    ]
+  },
   {
     "id":"pike-lacoste-beige",
     "sku":"PIK-LAC-BE",
@@ -56,7 +46,7 @@
     "composition":"100% хлопок",
     "width_cm":240,
     "price_usd":6.0,
-    "images":["/assets/pike-lacoste-beige.jpg"]
+    "images":["/assets/placeholder.jpg"]
   },
   {
     "id":"duck-teflon-olive",
@@ -67,7 +57,7 @@
     "composition":"65/35 хлопок/полиэстер",
     "width_cm":280,
     "price_usd":4.8,
-    "images":["/assets/duck-olive.jpg"]
+    "images":["/assets/placeholder.jpg"]
   },
   {
     "id":"denim-womens-10oz",
@@ -78,6 +68,6 @@
     "composition":"Хлопок с эластаном",
     "width_cm":150,
     "price_usd":5.2,
-    "images":["/assets/denim-10oz.jpg"]
+    "images":["/assets/placeholder.jpg"]
   }
 ]
