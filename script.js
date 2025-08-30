@@ -1,4 +1,4 @@
-// ========= TexTrend / script.js (auto-try image extensions) =========
+// ========= TexTrend / script.js (id→file map + fallback tries) =========
 const WA = "https://wa.me/905471161988";
 const $  = (s)=>document.querySelector(s);
 
@@ -7,7 +7,41 @@ const $grid=$("#grid"), $search=$("#search"), $cat=$("#category"),
 
 let PRODUCTS=[], LOADED=false;
 
-// Встроенный fallback, чтобы не было «квадратиков»
+// 1) Ручная карта соответствий id → относительный путь к файлу в /assets/img
+//    (заполнил по твоим загруженным файлам со скринов)
+const IMG_MAP = {
+  "muslin-2l-printed": "assets/img/muslin-2l-printed.jpg",
+  "muslin-2l-solid":   "assets/img/muslin-2l-solid.jpg",
+  "muslin-2l-stripe":  "assets/img/muslin-2l-stripe.jpg",
+  "muslin-4l-solid":   "assets/img/muslin-4l-solid.jpg",
+  "muslin-4l-stripe":  "assets/img/muslin-4l-stripe.jpg",
+  "muslin-check-digital": "assets/img/muslin-check-digital.jpg",
+  "muslin-check-rotary":  "assets/img/muslin-check-rotary.jpg",
+  "muslin-check-solid":   "assets/img/muslin-check-solid.jpg",
+  "muslin-hemp":       "assets/img/muslin-hemp.jpg",
+  "muslin-jacquard":   "assets/img/muslin-jacquard.jpg",
+
+  "poplin-solid":      "assets/img/poplin-solid.jpg",
+  "poplin-rotary":     "assets/img/poplin-rotary.jpg",
+  "poplin-digital":    "assets/img/poplin-digital.jpg",
+  "poplin-varenny":    "assets/img/poplin-varenny.jpg",
+
+  "satin-solid":       "assets/img/satin-solid.jpg",
+};
+
+// 2) Автопоиск по id, если в карте нет
+function imageCandidates(id){
+  const norm = String(id).trim().replace(/\s+/g,'-');
+  const base = `assets/img/${norm}`;
+  return [
+    `${base}.jpg`,
+    `${base}.jpeg`,
+    `${base}.JPG`,
+    `${base}.png`,
+  ];
+}
+
+// 3) Встроенный fallback (чтобы не было «квадратиков»)
 const FALLBACK_DATA = 'data:image/svg+xml;utf8,'+encodeURIComponent(
   `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600">
      <rect width="100%" height="100%" fill="#f2f2f2"/>
@@ -18,20 +52,7 @@ const FALLBACK_DATA = 'data:image/svg+xml;utf8,'+encodeURIComponent(
    </svg>`
 );
 
-// Формируем список возможных путей к картинке по id
-function imageCandidates(id){
-  // нормализуем id (на всякий)
-  const norm = String(id).trim().replace(/\s+/g,'-');
-  const base = `/assets/img/${norm}`;
-  return [
-    `${base}.jpg`,
-    `${base}.jpeg`,
-    `${base}.JPG`,
-    `${base}.png`,
-  ];
-}
-
-// Обработчик onerror: пробуем следующий вариант из data-candidates
+// 4) onerror-перебор кандидатов
 function tryNextImage(imgEl){
   try{
     const list = JSON.parse(imgEl.getAttribute('data-candidates')||'[]');
@@ -40,7 +61,6 @@ function tryNextImage(imgEl){
       imgEl.src = list[i];
       imgEl.setAttribute('data-idx', String(i+1));
     }else{
-      // Все варианты кончились — ставим fallback
       imgEl.onerror = null;
       imgEl.src = FALLBACK_DATA;
     }
@@ -56,9 +76,9 @@ async function boot(){
     const raw = await res.json();
 
     PRODUCTS = raw.map(p=>{
-      // если в JSON уже есть путь — ставим его первым
-      const fromJson = (Array.isArray(p.images) && p.images[0]) ? [p.images[0]] : [];
-      const cand = [...fromJson, ...imageCandidates(p.id)];
+      // если для id есть явная картинка — ставим её первой
+      const fromMap = IMG_MAP[p.id] ? [IMG_MAP[p.id]] : [];
+      const cand = [...fromMap, ...imageCandidates(p.id)];
       return {...p, _candidates: cand};
     });
 
@@ -103,7 +123,7 @@ function card(p){
     (p.width_cm?`• Ширина: ${p.width_cm} см\n`:"")+
     (p.composition?`• Состав: ${p.composition}\n`:"")+
     `• Цена: $${p.price_usd} / м\n• Кол-во: ___ м\n`+
-    (first? `Фото: ${location.origin}${first}\n`:"")
+    (first? `Фото: ${location.origin}/${first}\n`:"")
   );
 
   return `
