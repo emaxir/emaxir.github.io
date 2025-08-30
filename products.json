@@ -51,5 +51,101 @@
 
   { "id":"linens-poly-solid", "name":"Линенс (имитация льна, 100% ПЭ) — однотон/глиттер", "category":"Линенс", "kind":"Имитация льна", "print":"Однотон", "composition":"100% полиэстер", "width_cm":300, "price_usd":3.9, "images":["/assets/placeholder.jpg"] },
   { "id":"linens-embroidery", "name":"Линенс — с вышивкой (кружевной)", "category":"Линенс", "kind":"Вышивка", "print":"Декор", "composition":"ПЭ/хлопок", "width_cm":300, "price_usd":5.5, "images":["/assets/placeholder.jpg"] },
-  { "id":"linens-printed", "name":"Линенс — принтованный", "category":"Линенс", "kind":"Принт", "print":"Ротация", "composition":"ПЭ/хлопок", "width_cm":300, "price_usd":4.2, "images":["/assets/placeholder.jpg"] }
+  { "id":"linens-printed", "name":"Линенс — принтованный", "category":"Линенс", "kind":"Принт", "print":"Ротация", "composition":"ПЭ/хлопок", "width_cm":300, "price_usd":4.2, "images":["/assets/placeholder.jpg"] },
+
+  /* ------- ОДЕЖНЫЕ ТКАНИ ------- */
+  { "id":"futer-3n-brushed", "name":"Футер 3-нитка с начёсом", "category":"Трикотаж", "kind":"Футер 3-нитка", "print":"Однотон", "composition":"Хлопок/ПЭ", "width_cm":180, "price_usd":7.2, "images":["/assets/placeholder.jpg"] },
+  { "id":"futer-3n-diagonal", "name":"Футер 3-нитка диагональ", "category":"Трикотаж", "kind":"Футер 3-нитка", "print":"Диагональ", "composition":"Хлопок/ПЭ", "width_cm":180, "price_usd":7.5, "images":["/assets/placeholder.jpg"] },
+  { "id":"futer-3n-velour", "name":"Футер 3-нитка с эффектом велюра", "category":"Трикотаж", "kind":"Футер 3-нитка", "print":"Однотон", "composition":"Хлопок/ПЭ", "width_cm":180, "price_usd":7.9, "images":["/assets/placeholder.jpg"] },
+  { "id":"futer-3n-printed", "name":"Футер 3-нитка — принт", "category":"Трикотаж", "kind":"Футер 3-нитка", "print":"Принт", "composition":"Хлопок/ПЭ", "width_cm":180, "price_usd":8.2, "images":["/assets/placeholder.jpg"] },
+  { "id":"futer-3n-100c", "name":"Футер 3-нитка — 100% хлопок", "category":"Трикотаж", "kind":"Футер 3-нитка", "print":"Однотон", "composition":"100% хлопок", "width_cm":180, "price_usd":8.9, "images":["/assets/placeholder.jpg"] },
+  { "id":"futer-2n", "name":"Футер 2-нитка", "category":"Трикотаж", "kind":"Футер 2-нитка", "print":"Однотон", "composition":"Хлопок/ПЭ", "width_cm":180, "price_usd":6.2, "images":["/assets/placeholder.jpg"] },
+
+  { "id":"kulirka-260", "name":"Кулирка 260 г/м²", "category":"Трикотаж", "kind":"Кулирка", "print":"Однотон", "composition":"Хлопок/Эластан", "width_cm":180, "price_usd":6.0, "images":["/assets/placeholder.jpg"] },
+  { "id":"kulirka-190-200", "name":"Кулирка 190–200 г/м²", "category":"Трикотаж", "kind":"Кулирка", "print":"Однотон", "composition":"Хлопок", "width_cm":180, "price_usd":4.9, "images":["/assets/placeholder.jpg"] },
+  { "id":"kulirka-elastan", "name":"Кулирка с эластаном (разные плотности)", "category":"Трикотаж", "kind":"Кулирка", "print":"Однотон", "composition":"Хлопок/Эластан", "width_cm":180, "price_usd":5.6, "images":["/assets/placeholder.jpg"] },
+  { "id":"kulirka-printed", "name":"Кулирка — принт", "category":"Трикотаж", "kind":"Кулирка", "print":"Принт", "composition":"Хлопок/Эластан", "width_cm":180, "price_usd":5.9, "images":["/assets/placeholder.jpg"] },
+  { "id":"kulirka-digital", "name":"Кулирка — цифровая печать", "category":"Трикотаж", "kind":"Кулирка", "print":"Цифровая", "composition":"Хлопок/Эластан", "width_cm":180, "price_usd":6.4, "images":["/assets/placeholder.jpg"] },
+
+  { "id":"pique-lacoste-200", "name":"Пике Лакост — 200 г/м²", "category":"Трикотаж", "kind":"Пике Лакост", "print":"Однотон", "composition":"Хлопок/ПЭ", "width_cm":180, "price_usd":5.1, "images":["/assets/placeholder.jpg"] },
+  { "id":"pique-lacoste-220", "name":"Пике Лакост — 220 г/м²", "category":"Трикотаж", "kind":"Пике Лакост", "print":"Однотон", "composition":"Хлопок/ПЭ", "width_cm":180, "price_usd":5.4, "images":["/assets/placeholder.jpg"] },
+
+  { "id":"interlock", "name":"Интерлок", "category":"Трикотаж", "kind":"Интерлок", "print":"Однотон", "composition":"Хлопок", "width_cm":180, "price_usd":5.2, "images":["/assets/placeholder.jpg"] },
+  { "id":"ribana-transfer", "name":"Рибана — трансферная", "category":"Трикотаж", "kind":"Рибана", "print":"Однотон", "composition":"Хлопок/Эластан", "width_cm":110, "price_usd":4.8, "images":["/assets/placeholder.jpg"] },
+  { "id":"lapsha", "name":"Лапша", "category":"Трикотаж", "kind":"Лапша", "print":"Однотон", "composition":"Хлопок/Эластан", "width_cm":140, "price_usd":5.0, "images":["/assets/placeholder.jpg"] },
+  { "id":"lapsha-printed", "name":"Лапша — принтованная", "category":"Трикотаж", "kind":"Лапша", "print":"Принт", "composition":"Хлопок/Эластан", "width_cm":140, "price_usd":5.4, "images":["/assets/placeholder.jpg"] },
+
+  { "id":"tencel-fabric", "name":"Тенсель", "category":"Эко-ткани", "kind":"Тенсель", "print":"Однотон", "composition":"Вискоза (лиоцел)", "width_cm":150, "price_usd":7.9, "images":["/assets/placeholder.jpg"] },
+  { "id":"modal-fabric", "name":"Модал", "category":"Эко-ткани", "kind":"Модал", "print":"Однотон", "composition":"Вискоза (модал)", "width_cm":150, "price_usd":6.9, "images":["/assets/placeholder.jpg"] },
+  { "id":"cupro-fabric", "name":"Купра (Cupro)", "category":"Эко-ткани", "kind":"Купра", "print":"Однотон", "composition":"Вискоза (купро)", "width_cm":140, "price_usd":9.9, "images":["/assets/placeholder.jpg"] },
+
+  { "id":"broderie-anglaise-voile", "name":"Шитьё (Прошва) на вуали", "category":"Плательные", "kind":"Прошва", "print":"Декор", "composition":"100% хлопок", "width_cm":140, "price_usd":7.2, "images":["/assets/placeholder.jpg"] },
+  { "id":"broderie-anglaise-poplin", "name":"Шитьё (Прошва) на поплине", "category":"Плательные", "kind":"Прошва", "print":"Декор", "composition":"100% хлопок", "width_cm":140, "price_usd":7.5, "images":["/assets/placeholder.jpg"] },
+
+  { "id":"shtapel", "name":"Штапель", "category":"Плательные", "kind":"Штапель", "print":"Однотон", "composition":"Вискоза", "width_cm":140, "price_usd":4.6, "images":["/assets/placeholder.jpg"] },
+  { "id":"belmondo", "name":"Бельмондо", "category":"Плательные", "kind":"Бельмондо", "print":"Однотон", "composition":"ПЭ/Вискоза", "width_cm":150, "price_usd":5.8, "images":["/assets/placeholder.jpg"] },
+  { "id":"viscose-satin", "name":"Вискозный сатин", "category":"Плательные", "kind":"Сатин", "print":"Однотон", "composition":"Вискоза", "width_cm":140, "price_usd":6.4, "images":["/assets/placeholder.jpg"] },
+
+  { "id":"linen-solid", "name":"Лён — однотон", "category":"Лён", "kind":"Классический", "print":"Однотон", "composition":"100% лён", "width_cm":150, "price_usd":8.9, "images":["/assets/placeholder.jpg"] },
+  { "id":"linen-printed", "name":"Лён — принтованный", "category":"Лён", "kind":"Принт", "print":"Принт", "composition":"Лён/Вискоза", "width_cm":150, "price_usd":9.2, "images":["/assets/placeholder.jpg"] },
+  { "id":"linen-eco-300", "name":"Лён (100% эко) — 300 см", "category":"Лён", "kind":"Широкий 300", "print":"Однотон", "composition":"100% лён", "width_cm":300, "price_usd":12.9, "images":["/assets/placeholder.jpg"] },
+
+  { "id":"tulle-hayal", "name":"Фатин Хаяль / сетки", "category":"Сетки", "kind":"Хаяль", "print":"Однотон", "composition":"ПЭ", "width_cm":300, "price_usd":2.8, "images":["/assets/placeholder.jpg"] },
+  { "id":"tulle-crystal", "name":"Фатин Кристаль", "category":"Сетки", "kind":"Кристаль", "print":"Однотон", "composition":"ПЭ", "width_cm":300, "price_usd":3.2, "images":["/assets/placeholder.jpg"] },
+
+  { "id":"denim", "name":"Джинсовые ткани", "category":"Деним", "kind":"10–14 oz", "print":"Однотон", "composition":"Хлопок/Эластан", "width_cm":150, "price_usd":6.2, "images":["/assets/placeholder.jpg"] },
+
+  { "id":"poplin-shirt", "name":"Поплин рубашечный", "category":"Рубашечные", "kind":"Рубашечный", "print":"Однотон", "composition":"Хлопок/ПЭ", "width_cm":150, "price_usd":3.9, "images":["/assets/placeholder.jpg"] },
+  { "id":"voile-batiste", "name":"Вуаль (батист)", "category":"Рубашечные", "kind":"Вуаль/Батист", "print":"Однотон", "composition":"Хлопок", "width_cm":140, "price_usd":4.4, "images":["/assets/placeholder.jpg"] },
+
+  { "id":"velvet-cotton-hypo", "name":"Бархат люкс 100% хлопок (гипоаллерг.)", "category":"Бархат", "kind":"Хлопковый бархат", "print":"Однотон", "composition":"100% хлопок", "width_cm":140, "price_usd":14.9, "images":["/assets/placeholder.jpg"] },
+  { "id":"velvet-silk", "name":"Шёлковый бархат", "category":"Бархат", "kind":"Шёлковый", "print":"Однотон", "composition":"Шёлк/Вискоза", "width_cm":135, "price_usd":22.0, "images":["/assets/placeholder.jpg"] },
+
+  { "id":"silk-printed", "name":"Шёлк — принтованный", "category":"Шёлк", "kind":"Шёлк", "print":"Принт", "composition":"100% шёлк", "width_cm":135, "price_usd":19.0, "images":["/assets/placeholder.jpg"] },
+
+  { "id":"viscose-jersey-lycra", "name":"Вискозная кулирка с лайкрой (шелковистый)", "category":"Трикотаж", "kind":"Вискозная кулирка", "print":"Однотон", "composition":"Вискоза/Эластан", "width_cm":170, "price_usd":5.9, "images":["/assets/placeholder.jpg"] },
+  { "id":"viscose-jersey-turlu", "name":"Вискозная кулирка (турлу)", "category":"Трикотаж", "kind":"Вискозная кулирка", "print":"Однотон", "composition":"Вискоза", "width_cm":170, "price_usd":5.5, "images":["/assets/placeholder.jpg"] },
+
+  { "id":"tweed-chanel", "name":"Твид — Шанель", "category":"Костюмные", "kind":"Твид Шанель", "print":"Фактура", "composition":"ПЭ/Вискоза/Хлопок", "width_cm":145, "price_usd":12.0, "images":["/assets/placeholder.jpg"] },
+
+  { "id":"quilted-outer", "name":"Стёганые ткани (верхняя одежда)", "category":"Утеплитель", "kind":"Стёганые", "print":"Стёжка", "composition":"ПЭ + синтепон", "width_cm":150, "price_usd":7.9, "images":["/assets/placeholder.jpg"] },
+  { "id":"plashovka", "name":"Плащёвка", "category":"Техтъкани", "kind":"Плащёвка", "print":"Однотон", "composition":"ПЭ", "width_cm":150, "price_usd":3.8, "images":["/assets/placeholder.jpg"] },
+  { "id":"faux-leather-velvet", "name":"Искусственная кожа с французским вельветом", "category":"Техтъкани", "kind":"Кожа + вельвет", "print":"Фактура", "composition":"ПУ/ПЭ", "width_cm":140, "price_usd":9.5, "images":["/assets/placeholder.jpg"] },
+
+  { "id":"mahra-panel", "name":"Махра купонами", "category":"Махра", "kind":"Купоны", "print":"Принт", "composition":"Хлопок/ПЭ", "width_cm":180, "price_usd":6.2, "images":["/assets/placeholder.jpg"] },
+  { "id":"mahra-cotton", "name":"Махра — хлопок", "category":"Махра", "kind":"100% хлопок", "print":"Однотон", "composition":"100% хлопок", "width_cm":180, "price_usd":6.8, "images":["/assets/placeholder.jpg"] },
+  { "id":"mahra-modal", "name":"Махра — модал", "category":"Махра", "kind":"Модал", "print":"Однотон", "composition":"Модал/Хлопок", "width_cm":180, "price_usd":7.4, "images":["/assets/placeholder.jpg"] },
+  { "id":"mahra-waterproof", "name":"Непромокаемая махра", "category":"Махра", "kind":"Ламинированная", "print":"Однотон", "composition":"Хлопок/ПЭ (PU-слой)", "width_cm":180, "price_usd":7.9, "images":["/assets/placeholder.jpg"] },
+
+  { "id":"pique-quilted-cotton", "name":"Стёганые хлопковые пике", "category":"Пике", "kind":"Стёганые", "print":"Стёжка", "composition":"Хлопок/ПЭ", "width_cm":240, "price_usd":6.2, "images":["/assets/placeholder.jpg"] },
+  { "id":"pique-quilted-filled", "name":"Стёганые пике с наполнителем", "category":"Пике", "kind":"Стёганые", "print":"Стёжка", "composition":"Хлопок/ПЭ + наполнитель", "width_cm":240, "price_usd":6.9, "images":["/assets/placeholder.jpg"] },
+  { "id":"pique-waffle", "name":"Вафельные пике", "category":"Пике", "kind":"Вафля", "print":"Фактура", "composition":"Хлопок", "width_cm":240, "price_usd":4.6, "images":["/assets/placeholder.jpg"] },
+  { "id":"waffle-chess", "name":"Шахматная вафля", "category":"Пике", "kind":"Вафля «шахматка»", "print":"Фактура", "composition":"Хлопок", "width_cm":240, "price_usd":4.8, "images":["/assets/placeholder.jpg"] },
+  { "id":"waffle-greek", "name":"Греческая вафля", "category":"Пике", "kind":"Вафля «греческая»", "print":"Фактура", "composition":"Хлопок", "width_cm":240, "price_usd":4.8, "images":["/assets/placeholder.jpg"] },
+  { "id":"waffle-mix", "name":"Микс вафля", "category":"Пике", "kind":"Микс вафель", "print":"Фактура", "composition":"Хлопок/ПЭ", "width_cm":240, "price_usd":4.4, "images":["/assets/placeholder.jpg"] },
+  { "id":"waffle-greek-luxsoft", "name":"Люкс Софт — греческая вафля", "category":"Пике", "kind":"Люкс Софт", "print":"Фактура", "composition":"Хлопок/Микрофибра", "width_cm":240, "price_usd":5.6, "images":["/assets/placeholder.jpg"] },
+  { "id":"knit-pique-braid", "name":"Вязаное пике «косичка»", "category":"Пике", "kind":"Вязаное", "print":"Фактура", "composition":"Хлопок/ПЭ", "width_cm":200, "price_usd":5.2, "images":["/assets/placeholder.jpg"] },
+  { "id":"knit-cotton-dot", "name":"Вязаный хлопок — пунктир пике", "category":"Пике", "kind":"Вязаное", "print":"Пунктир", "composition":"Хлопок", "width_cm":200, "price_usd":5.4, "images":["/assets/placeholder.jpg"] },
+  { "id":"quilted-cotton-dot", "name":"Стёганый хлопок — пунктир пике", "category":"Пике", "kind":"Стёганые", "print":"Пунктир", "composition":"Хлопок/ПЭ", "width_cm":240, "price_usd":6.0, "images":["/assets/placeholder.jpg"] },
+  { "id":"pique-kids-applique", "name":"Хлопковые пике с аппликациями (детские)", "category":"Пике", "kind":"Аппликации", "print":"Декор", "composition":"Хлопок", "width_cm":240, "price_usd":6.2, "images":["/assets/placeholder.jpg"] },
+  { "id":"waffle-authentic", "name":"Аутентичная вафля", "category":"Пике", "kind":"Аутентичная", "print":"Фактура", "composition":"Хлопок", "width_cm":240, "price_usd":5.0, "images":["/assets/placeholder.jpg"] },
+  { "id":"pique-tea-quilted", "name":"Чайное пике — стёганное, хлопок 100%", "category":"Пике", "kind":"Чайное стёганое", "print":"Стёжка", "composition":"100% хлопок", "width_cm":240, "price_usd":6.6, "images":["/assets/placeholder.jpg"] },
+
+  { "id":"burlap", "name":"Мешковина", "category":"Декоративные", "kind":"Джутовая ткань", "print":"Фактура", "composition":"Джут", "width_cm":150, "price_usd":2.9, "images":["/assets/placeholder.jpg"] },
+  { "id":"jute", "name":"Жут", "category":"Декоративные", "kind":"Джут", "print":"Фактура", "composition":"Джут", "width_cm":150, "price_usd":3.2, "images":["/assets/placeholder.jpg"] },
+  { "id":"linen-50-50", "name":"Лён 50/50", "category":"Лён", "kind":"Смесовый 50/50", "print":"Однотон", "composition":"Лён/Хлопок 50/50", "width_cm":150, "price_usd":6.9, "images":["/assets/placeholder.jpg"] },
+
+  /* ------- ФУРНИТУРА (карточки-разделы) ------- */
+  { "id":"notions-cotton-lace", "name":"Фурнитура — хлопковые кружева", "category":"Фурнитура", "kind":"Кружева", "print":"Декор", "composition":"Хлопок", "width_cm":0, "price_usd":0.0, "images":["/assets/placeholder.jpg"] },
+  { "id":"notions-cotton-elastic-lace", "name":"Фурнитура — хлопковые кружевные резинки", "category":"Фурнитура", "kind":"Резинки кружевные", "print":"Декор", "composition":"Хлопок/Эластан", "width_cm":0, "price_usd":0.0, "images":["/assets/placeholder.jpg"] },
+  { "id":"notions-guipure", "name":"Фурнитура — гюпюр", "category":"Фурнитура", "kind":"Гюпюр", "print":"Декор", "composition":"ПЭ/Хлопок", "width_cm":0, "price_usd":0.0, "images":["/assets/placeholder.jpg"] },
+  { "id":"notions-lingerie-lace", "name":"Кружева для нижнего белья", "category":"Фурнитура", "kind":"Кружева бельевые", "print":"Декор", "composition":"ПЭ/Эластан", "width_cm":0, "price_usd":0.0, "images":["/assets/placeholder.jpg"] },
+  { "id":"notions-ruffles", "name":"Рюши", "category":"Фурнитура", "kind":"Рюши", "print":"Декор", "composition":"Разное", "width_cm":0, "price_usd":0.0, "images":["/assets/placeholder.jpg"] },
+  { "id":"notions-dantel", "name":"Дантель", "category":"Фурнитура", "kind":"Дантель", "print":"Декор", "composition":"Разное", "width_cm":0, "price_usd":0.0, "images":["/assets/placeholder.jpg"] },
+  { "id":"notions-bias", "name":"Косые бейки", "category":"Фурнитура", "kind":"Бейка косая", "print":"Однотон", "composition":"Хлопок/ПЭ", "width_cm":0, "price_usd":0.0, "images":["/assets/placeholder.jpg"] },
+  { "id":"notions-piping", "name":"Канты", "category":"Фурнитура", "kind":"Кант", "print":"Однотон", "composition":"Хлопок/ПЭ", "width_cm":0, "price_usd":0.0, "images":["/assets/placeholder.jpg"] },
+  { "id":"notions-ribbons", "name":"Ленты", "category":"Фурнитура", "kind":"Ленты", "print":"Однотон", "composition":"Разное", "width_cm":0, "price_usd":0.0, "images":["/assets/placeholder.jpg"] },
+  { "id":"notions-collars", "name":"Воротнички", "category":"Фурнитура", "kind":"Воротнички", "print":"Декор", "composition":"Разное", "width_cm":0, "price_usd":0.0, "images":["/assets/placeholder.jpg"] },
+  { "id":"notions-elastics", "name":"Резинки", "category":"Фурнитура", "kind":"Резинки", "print":"Однотон", "composition":"ПЭ/Эластан", "width_cm":0, "price_usd":0.0, "images":["/assets/placeholder.jpg"] },
+  { "id":"notions-appliques", "name":"Аппликации", "category":"Фурнитура", "kind":"Аппликации", "print":"Декор", "composition":"Разное", "width_cm":0, "price_usd":0.0, "images":["/assets/placeholder.jpg"] }
 ]
