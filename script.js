@@ -2,19 +2,21 @@ const WA = "https://wa.me/905471161988";
 const $ = (s)=>document.querySelector(s);
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Берём элементы ПОСЛЕ загрузки DOM
   const $grid = $("#grid");
   const $search = $("#search");
   const $cat = $("#category");
   const $comp = $("#composition");
   const $print = $("#print");
-
-  // Если это не страница каталога (нет #grid) — тихо выходим
   if (!$grid) return;
+
+  const params = new URLSearchParams(location.search);
+  if ($cat && params.get("cat")) $cat.value = params.get("cat");
+  if ($comp && params.get("comp")) $comp.value = params.get("comp");
+  if ($print && params.get("print")) $print.value = params.get("print");
+  if ($search && params.get("q")) $search.value = params.get("q");
 
   let PRODUCTS = [];
 
-  // Загружаем товары
   fetch("products.json?ts=" + Date.now())
     .then(r => r.json())
     .then(data => { PRODUCTS = data; render(); })
@@ -30,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const prn  = ($print?.value || "");
 
     const list = PRODUCTS.filter(p => {
-      const hay = [p.name, p.category, p.print, p.composition, p.width_cm, (p.tags||[]).join(" ")].join(" ").toLowerCase();
+      const hay = [p.name, p.category, p.kind, p.print, p.composition, p.width_cm, (p.tags||[]).join(" ")].join(" ").toLowerCase();
       const okT    = term ? hay.includes(term) : true;
       const okC    = cat  ? (p.category||"").toLowerCase().includes(cat.toLowerCase()) : true;
       const okComp = comp ? (p.composition||"").toLowerCase() === comp.toLowerCase() : true;
@@ -58,13 +60,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     return `
       <article class="card">
-        <img alt="${p.name}" loading="lazy" src="${img}">
+        <img alt="${p.name}" loading="lazy" src="${img}" onclick="location.href='product.html?id=${p.id}'" style="cursor:pointer">
         <div class="pad">
           <div class="badges">
             ${p.print? `<span class="badge">${p.print}</span>`:""}
             ${p.composition? `<span class="badge">${p.composition}</span>`:""}
             ${p.width_cm? `<span class="badge">${p.width_cm} см</span>`:""}
             ${p.category? `<span class="badge">${p.category}</span>`:""}
+            ${p.kind? `<span class="badge">${p.kind}</span>`:""}
             ${colorsBadge}
           </div>
           <h3 style="margin:2px 0 6px">${p.name}</h3>
@@ -77,6 +80,5 @@ document.addEventListener("DOMContentLoaded", () => {
       </article>`;
   }
 
-  // Вешаем обработчики только на существующие элементы
   [$search, $cat, $comp, $print].filter(Boolean).forEach(el => el.addEventListener("input", render));
 });
