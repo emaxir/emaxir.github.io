@@ -1,4 +1,4 @@
-// ========= TexTrend / script.js (robust image resolve) =========
+// ========= TexTrend / script.js (simple & stable) =========
 const WA = "https://wa.me/905471161988";
 const $ = (s)=>document.querySelector(s);
 
@@ -8,57 +8,28 @@ const $grid=$("#grid"),
       $comp=$("#composition"),
       $print=$("#print");
 
-let PRODUCTS=[];
-
-/** Проверяем, грузится ли изображение по url */
-function imgExists(url){
-  return new Promise(resolve=>{
-    const im = new Image();
-    im.onload = ()=>resolve(true);
-    im.onerror = ()=>resolve(false);
-    // добавим cache-buster
-    im.src = url + (url.includes("?") ? "&" : "?") + "ts=" + Date.now();
-  });
-}
-
-/** Подбираем первый рабочий url для картинки товара */
-async function pickImageFor(p){
-  const candidates = [];
-
-  // 1) что пришло из products.json
-  if (Array.isArray(p.images) && p.images[0]) candidates.push(p.images[0]);
-
-  // 2) абсолютный и относительный путь по id
-  candidates.push(`/assets/img/${p.id}.jpg`);
-  candidates.push(`assets/img/${p.id}.jpg`);
-
-  // 3) если когда-то сохранено в png — тоже попробуем
-  candidates.push(`/assets/img/${p.id}.png`);
-  candidates.push(`assets/img/${p.id}.png`);
-
-  for (const u of candidates){
-    if (await imgExists(u)) return u;
-  }
-  return "/assets/placeholder.jpg";
-}
+let PRODUCTS=[], LOADED_ONCE=false;
 
 async function boot(){
   try{
     const res = await fetch("products.json?ts="+Date.now());
     const raw = await res.json();
 
-    // расправим картинки
-    const withImgs = [];
-    for (const p of raw){
-      const url = await pickImageFor(p);
-      withImgs.push({...p, images: [url]});
-    }
-    PRODUCTS = withImgs;
+    // Автопуть к фото по id (без проверки сети).
+    PRODUCTS = raw.map(p => {
+      const img = (Array.isArray(p.images) && p.images[0]) || `/assets/img/${p.id}.jpg`;
+      return {...p, images:[img]};
+    });
 
+    LOADED_ONCE = true;
     render();
   }catch(e){
-    console.error(e);
-    $grid.innerHTML = `<div style="grid-column:1/-1;color:#c00;text-align:center;padding:30px">Ошибка загрузки каталога.</div>`;
+    console.error("Catalog load failed:", e);
+    // Если ранее уже рисовали — не затираем сетку ошибкой.
+    if (!LOADED_ONCE) {
+      $grid.innerHTML = `<div style="grid-column:1/-1;color:#c00;text-align:center;padding:30px">
+        Ошибка загрузки каталога.</div>`;
+    }
   }
 }
 
@@ -77,8 +48,8 @@ function render(){
     return okT && okC && okComp && okPrn;
   });
 
-  $grid.innerHTML = list.map(card).join("")
-    || `<div style="grid-column:1/-1;text-align:center;color:#666;padding:30px">Ничего не найдено.</div>`;
+  $grid.innerHTML = list.map(card).join("") ||
+    `<div style="grid-column:1/-1;text-align:center;color:#666;padding:30px">Ничего не найдено.</div>`;
 }
 
 function card(p){
@@ -116,7 +87,7 @@ function card(p){
   </article>`;
 }
 
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener("DOMContentLoaded", ()=>{
   boot();
   [$search,$cat,$comp,$print].forEach(el=>el && el.addEventListener("input",render));
 });
