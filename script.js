@@ -1,10 +1,7 @@
-// ========= TexTrend / script.js =========
+// ========= TexTrend / script.js (robust image resolve) =========
 const WA = "https://wa.me/905471161988";
-
-// Шорткат для querySelector
 const $ = (s)=>document.querySelector(s);
 
-// Узлы каталога
 const $grid=$("#grid"),
       $search=$("#search"),
       $cat=$("#category"),
@@ -13,16 +10,50 @@ const $grid=$("#grid"),
 
 let PRODUCTS=[];
 
+/** Проверяем, грузится ли изображение по url */
+function imgExists(url){
+  return new Promise(resolve=>{
+    const im = new Image();
+    im.onload = ()=>resolve(true);
+    im.onerror = ()=>resolve(false);
+    // добавим cache-buster
+    im.src = url + (url.includes("?") ? "&" : "?") + "ts=" + Date.now();
+  });
+}
+
+/** Подбираем первый рабочий url для картинки товара */
+async function pickImageFor(p){
+  const candidates = [];
+
+  // 1) что пришло из products.json
+  if (Array.isArray(p.images) && p.images[0]) candidates.push(p.images[0]);
+
+  // 2) абсолютный и относительный путь по id
+  candidates.push(`/assets/img/${p.id}.jpg`);
+  candidates.push(`assets/img/${p.id}.jpg`);
+
+  // 3) если когда-то сохранено в png — тоже попробуем
+  candidates.push(`/assets/img/${p.id}.png`);
+  candidates.push(`assets/img/${p.id}.png`);
+
+  for (const u of candidates){
+    if (await imgExists(u)) return u;
+  }
+  return "/assets/placeholder.jpg";
+}
+
 async function boot(){
   try{
     const res = await fetch("products.json?ts="+Date.now());
     const raw = await res.json();
 
-    // Автоподстановка фото по id, если images не задано
-    PRODUCTS = raw.map(p=>{
-      let imgs = Array.isArray(p.images) && p.images.length ? p.images : [`/assets/img/${p.id}.jpg`];
-      return {...p, images: imgs};
-    });
+    // расправим картинки
+    const withImgs = [];
+    for (const p of raw){
+      const url = await pickImageFor(p);
+      withImgs.push({...p, images: [url]});
+    }
+    PRODUCTS = withImgs;
 
     render();
   }catch(e){
@@ -52,7 +83,6 @@ function render(){
 
 function card(p){
   const img = (p.images && p.images[0]) || `/assets/img/${p.id}.jpg`;
-  const safeImg = img || "/assets/placeholder.jpg";
 
   const msg = encodeURIComponent(
     `Здравствуйте! Хочу заказать:\n`+
@@ -61,12 +91,12 @@ function card(p){
     (p.width_cm?`• Ширина: ${p.width_cm} см\n`:"")+
     (p.composition?`• Состав: ${p.composition}\n`:"")+
     `• Цена: $${p.price_usd} / м\n• Кол-во: ___ м\n`+
-    (safeImg? `Фото: ${location.origin}${safeImg}\n`:"")
+    (img? `Фото: ${location.origin}${img}\n`:"")
   );
 
   return `
   <article class="card">
-    <img alt="${p.name}" loading="lazy" src="${safeImg}"
+    <img alt="${p.name}" loading="lazy" src="${img}"
          onerror="this.onerror=null;this.src='/assets/placeholder.jpg'">
     <div class="pad">
       <div class="badges">
@@ -86,7 +116,6 @@ function card(p){
   </article>`;
 }
 
-// Старт и фильтры
 document.addEventListener("DOMContentLoaded",()=>{
   boot();
   [$search,$cat,$comp,$print].forEach(el=>el && el.addEventListener("input",render));
