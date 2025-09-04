@@ -5,53 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TexTrend — оптовые ткани из Турции</title>
   <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
+  <!-- Шапка -->
+  <header class="header">
     <div class="logo">TexTrend</div>
-    <nav>
+    <nav class="nav">
       <a href="#catalog">Каталог</a>
-      <a href="#why">Почему мы</a>
-      <a href="https://wa.me/905471161988" target="_blank">WhatsApp заказ</a>
+      <a href="#about">Почему мы</a>
+      <a href="https://wa.me/905471161988" target="_blank" class="whatsapp-btn">WhatsApp заказ</a>
     </nav>
   </header>
 
+  <!-- Герой-блок -->
   <section class="hero">
     <h1>Оптовые ткани из Турции</h1>
     <p>Муслин, сатин, поплин, трикотаж, пике и многое другое.  
-       Пишите в WhatsApp — подберём оттенки и фактуры, пришлём образцы.</p>
-    <div class="buttons">
-      <a href="https://wa.me/905471161988" class="btn primary">Связаться в WhatsApp</a>
+    Пишите в WhatsApp — подберём оттенки и фактуры, пришлём образцы.</p>
+    <div class="hero-buttons">
+      <a href="https://wa.me/905471161988" target="_blank" class="btn primary">Связаться в WhatsApp</a>
       <a href="#catalog" class="btn secondary">Смотреть каталог</a>
     </div>
   </section>
 
-  <section id="why" class="why-us">
+  <!-- Почему мы -->
+  <section id="about" class="why-us">
     <h2>Почему нас выбирают</h2>
-    <ul>
-      <li><strong>Контроль качества</strong> — каждая партия перед отгрузкой</li>
-      <li><strong>Прямые поставки</strong> — без лишних наценок</li>
-      <li><strong>Подбор под задачу</strong> — цвета и образцы</li>
-    </ul>
+    <div class="why-grid">
+      <div class="why-card">
+        <h3>Контроль качества</h3>
+        <p>Каждая партия проверяется перед отгрузкой</p>
+      </div>
+      <div class="why-card">
+        <h3>Прямые поставки</h3>
+        <p>Без лишних наценок</p>
+      </div>
+      <div class="why-card">
+        <h3>Подбор под задачу</h3>
+        <p>Цвета и образцы по запросу</p>
+      </div>
+    </div>
   </section>
 
+  <!-- Каталог -->
   <section id="catalog" class="catalog">
     <h2>Каталог тканей</h2>
-    <div class="filters">
-      <input type="text" id="search" placeholder="Поиск по названию, составу, ширине...">
-      <select id="category"><option>Все категории</option></select>
-      <select id="composition"><option>Любой состав</option></select>
-      <select id="print"><option>Любая печать</option></select>
-    </div>
-    <div id="products" class="products">
-      <p>Фото и карточки подгружаются…</p>
-    </div>
+    <div id="products-container">Фото и карточки подгружаются...</div>
   </section>
 
-  <footer>
+  <!-- Подвал -->
+  <footer class="footer">
     <p>© TexTrend — оптовые ткани из Турции</p>
-    <p><a href="https://wa.me/905471161988">WhatsApp</a> · sales@textrend.store</p>
+    <p><a href="https://wa.me/905471161988">WhatsApp</a> | sales@textrend.store</p>
   </footer>
+
+  <script src="products.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
