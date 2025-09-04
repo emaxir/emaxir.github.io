@@ -1,96 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>TexTrend — оптовые ткани из Турции</title>
-  <link rel="icon" href="favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TexTrend — каталог тканей</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Шапка -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="/">TexTrend</a>
-      <nav class="top-nav">
-        <a href="#catalog" class="chip">Каталог</a>
-        <a href="#why" class="chip alt">Почему мы</a>
-        <a class="chip primary" target="_blank" rel="noopener"
-           href="https://wa.me/905471161988">WhatsApp заказ</a>
-      </nav>
-    </div>
+  <header class="header">
+    <div class="logo">TexTrend</div>
+    <nav class="nav">
+      <a href="#catalog">Каталог</a>
+      <a href="#why-us">Почему мы</a>
+      <a href="https://wa.me/905471161988" target="_blank" class="btn-accent">WhatsApp заказ</a>
+    </nav>
   </header>
 
-  <!-- HERO: фон с «тканевой» текстурой -->
   <section class="hero">
-    <div class="container hero-inner">
-      <h1>Оптовые ткани из&nbsp;Турции</h1>
-      <p class="lead">
-        Муслин, сатин, поплин, трикотаж, пике и&nbsp;другое. Пишите в&nbsp;WhatsApp —
-        подберём оттенки и&nbsp;фактуры, пришлём образцы.
-      </p>
-      <div class="hero-actions">
-        <a class="btn lg primary" target="_blank" rel="noopener"
-           href="https://wa.me/905471161988">Связаться в WhatsApp</a>
-        <a class="btn lg ghost" href="#catalog">Смотреть каталог</a>
-      </div>
+    <h1>Оптовые ткани из Турции</h1>
+    <p>Муслин, сатин, поплин, трикотаж, пике и другое.  
+    Пишите в WhatsApp — подберём оттенки и фактуры, пришлём образцы.</p>
+    <a href="https://wa.me/905471161988" target="_blank" class="btn-main">Связаться в WhatsApp</a>
+  </section>
 
-      <!-- Преимущества: аккуратные карточки, не как таблица -->
-      <div id="why" class="reasons">
-        <article class="reason">
-          <div class="ico">✓</div>
-          <div>
-            <div class="reason-title">Контроль качества</div>
-            <div class="reason-sub">каждая партия перед отгрузкой</div>
-          </div>
-        </article>
-        <article class="reason">
-          <div class="ico">⧉</div>
-          <div>
-            <div class="reason-title">Прямые поставки</div>
-            <div class="reason-sub">без лишних наценок</div>
-          </div>
-        </article>
-        <article class="reason">
-          <div class="ico">🎨</div>
-          <div>
-            <div class="reason-title">Подбор под задачу</div>
-            <div class="reason-sub">цвета и образцы</div>
-          </div>
-        </article>
-      </div>
+  <section id="why-us" class="why-us">
+    <h2>Почему нас выбирают</h2>
+    <div class="why-list">
+      <div class="why-item">Контроль качества <span>каждая партия перед отгрузкой</span></div>
+      <div class="why-item">Прямые поставки <span>без лишних наценок</span></div>
+      <div class="why-item">Подбор под задачу <span>цвета и образцы</span></div>
     </div>
   </section>
 
-  <!-- КАТАЛОГ -->
-  <main id="catalog" class="container pad-block">
-    <h2 class="section-title">Каталог тканей</h2>
-
-    <!-- Поиск/фильтры -->
-    <section class="filter card">
-      <div class="filter-grid">
-        <input id="search" class="input" placeholder="Поиск: название, состав, ширина…">
-        <select id="category" class="input"></select>
-        <select id="position" class="input"></select>
-        <select id="composition" class="input"></select>
-        <select id="print" class="input"></select>
-      </div>
-      <p class="muted">Цены в USD. Индивидуальные принты — по запросу.</p>
-    </section>
-
-    <!-- Сетка карточек -->
-    <section id="grid" class="grid"></section>
-  </main>
-
-  <!-- Футер -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>© TexTrend — оптовые ткани из Турции</div>
-      <div class="links">
-        <a target="_blank" rel="noopener" href="https://wa.me/905471161988">WhatsApp</a>
-        <a href="mailto:sales@textrend.store">sales@textrend.store</a>
-      </div>
+  <section id="catalog" class="catalog">
+    <h2>Каталог тканей</h2>
+    <div class="filters">
+      <input type="text" placeholder="Поиск по названию, составу, ширине…">
+      <select><option>Все категории</option></select>
+      <select><option>Все позиции</option></select>
+      <select><option>Состав</option></select>
+      <select><option>Печать / тип</option></select>
     </div>
+    <p class="note">Цены в USD. Индивидуальные принты — по запросу.</p>
+    <div id="product-list">Фото и карточки подгружаются…</div>
+  </section>
+
+  <footer class="footer">
+    <p>© TexTrend — оптовые ткани из Турции</p>
+    <p><a href="https://wa.me/905471161988">WhatsApp</a> · sales@textrend.store</p>
+    <p>textrend.store</p>
   </footer>
 
   <script src="script.js"></script>
