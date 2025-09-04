@@ -1,27 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const productList = document.getElementById("productList");
-  if (!productList) return;
+  const productsContainer = document.getElementById("products");
 
-  fetch("products.json")
-    .then(response => response.json())
-    .then(products => {
-      productList.innerHTML = "";
-      products.forEach(product => {
-        const card = document.createElement("div");
-        card.classList.add("product-card");
-
-        card.innerHTML = `
-          <img src="${product.images[0]}" alt="${product.name}">
-          <h3>${product.name}</h3>
-          <p>${product.composition} | ${product.width_cm} см</p>
-          <p class="price">$${product.price_usd} / м</p>
-          <a href="https://wa.me/905471161988?text=Интересует: ${product.name}" target="_blank">Заказать</a>
-        `;
-
-        productList.appendChild(card);
-      });
-    })
-    .catch(() => {
-      productList.innerHTML = "Ошибка загрузки каталога.";
-    });
+  // Заглушка: здесь подгрузка будет из products.json
+  productsContainer.innerHTML = `
+    <div class="product-card">
+      <img src="assets/muslin.jpg" alt="Муслин 4 слоя">
+      <div class="info">
+        <h3>Муслин 4 слоя — однотон</h3>
+        <p>100% хлопок · 240 см</p>
+        <div class="price">$9.5 / м</div>
+      </div>
+    </div>
+  `;
 });
