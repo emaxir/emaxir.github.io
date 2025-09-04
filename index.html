@@ -1,118 +1,135 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TexTrend — оптовые ткани из Турции</title>
-  <meta name="description" content="Муслин, поплин, сатин и др. Опт из Турции. Быстрая отгрузка, контроль качества, WhatsApp-заказ.">
-  <link rel="icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<header class="topbar">
-  <div class="topbar-inner wrap">
-    <a class="brand" href="/"><span class="dot"></span><span>TexTrend</span></a>
-    <nav class="nav">
-      <a class="btn ghost" href="#catalog">Каталог</a>
-      <a class="btn ghost" href="#benefits">Почему мы</a>
-      <a class="btn primary" href="https://wa.me/905471161988" target="_blank" rel="noopener">WhatsApp заказ</a>
+  <!-- Шапка -->
+  <header class="topbar">
+    <a class="brand" href="./">TexTrend</a>
+    <nav class="tabs">
+      <a class="tab" href="#catalog">Каталог</a>
+      <a class="tab" href="#why">Почему мы</a>
+      <a class="tab primary" target="_blank" rel="noopener" href="https://wa.me/905471161988">WhatsApp заказ</a>
     </nav>
-  </div>
-</header>
+  </header>
 
-<section class="hero">
-  <div class="hero-inner wrap">
-    <div>
-      <h1 class="h1">Ткани для дома и одежды <em>оптом из Турции</em></h1>
-      <p class="sub">Муслин, поплин, сатин, трикотаж, пике и многое другое. Стабильные партии, честные цены, быстрая логистика. Пишите в WhatsApp — ответ в день обращения.</p>
-      <div style="display:flex; gap:10px; margin-top:14px">
-        <a class="btn primary" href="https://wa.me/905471161988" target="_blank" rel="noopener">Связаться в WhatsApp</a>
-        <a class="btn" href="#catalog">Смотреть каталог</a>
+  <!-- HERO без «общих» цифр -->
+  <section class="hero">
+    <p class="tagline">
+      Оптовые ткани из Турции: муслин, сатин, поплин, трикотаж, пике и другое.
+      Пишите в WhatsApp — подберём оттенки и фактуры, пришлём образцы.
+    </p>
+
+    <div class="actions">
+      <a href="https://wa.me/905471161988" class="btn primary">Связаться в WhatsApp</a>
+      <a href="#catalog" class="btn secondary">Смотреть каталог</a>
+    </div>
+
+    <ul class="benefits">
+      <li>Контроль качества перед отгрузкой</li>
+      <li>Прямые поставки без лишних наценок</li>
+      <li>Подбор под задачу: цвета и образцы</li>
+    </ul>
+  </section>
+
+  <!-- Каталог -->
+  <main id="catalog" class="container">
+    <h1 class="h1">Каталог тканей</h1>
+
+    <!-- Фильтры -->
+    <div class="filters card">
+      <h2 class="h2">Быстрый поиск</h2>
+
+      <input id="search" class="input" type="search"
+             placeholder="Поиск по названию, составу, ширине…"/>
+
+      <div class="row">
+        <label class="select-wrap">
+          <span>Категория</span>
+          <select id="category" class="select">
+            <option value="">Все категории</option>
+            <option>Муслин</option>
+            <option>Поплин</option>
+            <option>Сатин</option>
+            <option>Фланель</option>
+            <option>Дак</option>
+            <option>Линенс</option>
+            <option>Лён</option>
+            <option>Трикотаж</option>
+            <option>Пике</option>
+            <option>Сетки</option>
+            <option>Рубашечные</option>
+            <option>Плательные</option>
+            <option>Бархат</option>
+            <option>Деним</option>
+            <option>Махра</option>
+            <option>Фурнитура</option>
+          </select>
+        </label>
+
+        <label class="select-wrap">
+          <span>Состав</span>
+          <select id="composition" class="select">
+            <option value="">Любой состав</option>
+          </select>
+        </label>
+
+        <label class="select-wrap">
+          <span>Печать / тип</span>
+          <select id="print" class="select">
+            <option value="">Любая печать</option>
+          </select>
+        </label>
       </div>
-      <div class="kpis">
-        <div class="kpi"><b>240–300 см</b><span class="note">ширина сатина/дака</span></div>
-        <div class="kpi"><b>100% хлопок</b><span class="note">ключевые позиции</span></div>
-        <div class="kpi"><b>48–72 ч</b><span class="note">сбор и отгрузка</span></div>
+
+      <p class="hint">Цены в USD. Индивидуальные принты — по запросу.</p>
+    </div>
+
+    <!-- Сетка карточек -->
+    <div id="grid" class="grid" aria-live="polite"></div>
+
+    <!-- Ошибка/статус -->
+    <div id="status" class="status" hidden></div>
+  </main>
+
+  <!-- Почему нас выбирают -->
+  <section id="why" class="why container">
+    <h2 class="h2">Почему нас выбирают</h2>
+    <div class="why-cards">
+      <div class="why-card">
+        <div class="why-title">Контроль качества</div>
+        <div class="why-sub">перед отгрузкой</div>
+      </div>
+      <div class="why-card">
+        <div class="why-title">Прямые поставки</div>
+        <div class="why-sub">без лишних наценок</div>
+      </div>
+      <div class="why-card">
+        <div class="why-title">Подбор под задачу</div>
+        <div class="why-sub">образцы и цвета</div>
       </div>
     </div>
+  </section>
 
-    <div class="hero-card">
-      <div class="note" style="margin-bottom:8px">Быстрый поиск:</div>
-      <div class="filters">
-        <input id="search" class="input" type="search" placeholder="Поиск по названию, составу, ширине…">
-        <!-- Категория (укрупнённые группы) -->
-        <select id="category">
-          <option value="">Все категории</option>
-          <option>Муслин</option>
-          <option>Поплин</option>
-          <option>Сатин</option>
-          <option>Фланель</option>
-          <option>Дак</option>
-          <option>Лён</option>
-          <option>Трикотаж</option>
-          <option>Пике</option>
-          <option>Сетки</option>
-          <option>Рубашечные</option>
-          <option>Плательные</option>
-          <option>Бархат</option>
-          <option>Деним</option>
-          <option>Махра</option>
-          <option>Фурнитура</option>
-        </select>
-        <!-- НОВОЕ: позиция/подкатегория. Заполняется автоматически из products.json -->
-        <select id="subcategory">
-          <option value="">Все позиции</option>
-        </select>
-        <select id="composition">
-          <option value="">Состав</option>
-          <option>100% хлопок</option>
-          <option>Хлопок/ПЭ</option>
-          <option>Хлопок/Лён</option>
-          <option>Вискоза</option>
-          <option>Вискоза/Эластан</option>
-          <option>ПЭ</option>
-        </select>
-        <select id="print">
-          <option value="">Принт</option>
-          <option>Однотон</option>
-          <option>Полоска</option>
-          <option>Ротация</option>
-          <option>Цифровая</option>
-          <option>Жаккард</option>
-          <option>Фактура</option>
-        </select>
+  <!-- Подвал -->
+  <footer class="footer">
+    <div class="container">
+      <div>© TexTrend — оптовые ткани из Турции</div>
+      <div class="links">
+        <a target="_blank" rel="noopener" href="https://wa.me/905471161988">WhatsApp</a>
+        <a href="mailto:sales@textrend.store">sales@textrend.store</a>
       </div>
-      <div class="note" style="margin-top:8px">Цены в USD. Индивидуальные принты — по запросу.</div>
     </div>
-  </div>
-</section>
+  </footer>
 
-<main id="catalog" class="wrap">
-  <div class="grid" id="grid"></div>
-</main>
-
-<section id="benefits" class="wrap" style="margin-top:24px">
-  <div class="hero-card" style="display:grid; gap:12px">
-    <div style="font-weight:800">Почему нас выбирают</div>
-    <div class="kpis">
-      <div class="kpi"><b>Контроль качества</b><span class="note">перед отгрузкой</span></div>
-      <div class="kpi"><b>Прямые поставки</b><span class="note">без лишних наценок</span></div>
-      <div class="kpi"><b>Подбор под задачу</b><span class="note">образцы и цвета</span></div>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="inner wrap">
-    <div>© TexTrend — оптовые ткани из Турции</div>
-    <div style="display:flex; gap:12px">
-      <a href="https://wa.me/905471161988" target="_blank" rel="noopener">WhatsApp</a>
-      <a href="mailto:sales@textrend.store">sales@textrend.store</a>
-    </div>
-  </div>
-</footer>
-
-<script src="/script.js?v=brand2"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
