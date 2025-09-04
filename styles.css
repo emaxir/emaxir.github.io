@@ -1,98 +1,69 @@
-/* ====== БАЗА / ПАЛИТРА ====== */
-:root{
-  --emerald:#0f7a6e;           /* насыщённый изумруд (акцент) */
-  --emerald-600:#0d6b61;
-  --ivory:#f7f4ee;              /* тёплый молочный фон */
-  --card:#ffffff;               /* карточки */
-  --graphite:#28323a;           /* основной текст */
-  --muted:#71808d;              /* вторичный текст */
-  --beige:#e8dcc7;              /* мягкий бежевый штрих */
-  --ring: 0 0 0 2px color-mix(in oklab, var(--emerald) 35%, transparent);
+/* ====== ФОН ====== */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #FAF6F1, #FFFFFF);
+  color: #222; /* графитовый текст */
+  margin: 0;
+  padding: 0;
 }
 
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  color:var(--graphite);
-  background:
-    /* лёгкая «тканевая» клетка */
-    linear-gradient(0deg,rgba(0,0,0,.02) 1px,transparent 1px) 0 0/20px 20px,
-    linear-gradient(90deg,rgba(0,0,0,.02) 1px,transparent 1px) 0 0/20px 20px,
-    radial-gradient(60% 60% at 10% 10%,rgba(255,255,255,.7),transparent 40%),
-    var(--ivory);
-  font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+/* ====== КАРТОЧКИ / БЛОКИ ====== */
+.card, .feature-box {
+  background: #FFFFFF;
+  border-radius: 14px;
+  padding: 18px;
+  margin: 12px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06); /* мягкая тень */
+  transition: transform 0.2s ease;
 }
 
-/* Контейнеры и утилиты */
-.container{width:min(1160px,100% - 32px);margin-inline:auto}
-.pad-block{padding-block:32px}
-.muted{color:var(--muted)}
-.section-title{font-size:28px;margin:8px 0 16px}
-
-/* ====== Хедер ====== */
-.site-header{position:sticky;top:0;z-index:10;background:var(--ivory);backdrop-filter:saturate(1.1) blur(6px);border-bottom:1px solid #00000010}
-.header-inner{display:flex;align-items:center;gap:16px;padding:12px 0}
-.brand{font-weight:800;font-size:22px;text-decoration:none;color:var(--graphite)}
-.top-nav{margin-left:auto;display:flex;gap:12px;flex-wrap:wrap}
-
-/* Чип-кнопки в шапке */
-.chip{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;background:#ffffff80;border:1px solid #00000012;color:var(--graphite);text-decoration:none}
-.chip:hover{background:#fff}
-.chip.alt{background:#eaf6f4;border-color:#bfe3de;color:var(--emerald-600)}
-.chip.primary{background:var(--emerald);color:#fff;border-color:var(--emerald)}
-.chip.primary:hover{background:var(--emerald-600)}
-
-/* ====== HERO ====== */
-.hero{padding:28px 0 8px}
-.hero-inner{padding:12px 0}
-.hero h1{font-size:34px;margin:0 0 8px}
-.lead{color:var(--muted);max-width:720px;margin:0 0 18px}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
-
-/* Кнопки */
-.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid #00000012;border-radius:14px;padding:10px 14px;text-decoration:none;transition:transform .05s ease, box-shadow .15s ease}
-.btn.lg{padding:14px 18px;border-radius:16px;font-weight:600}
-.btn.primary{background:var(--emerald);color:#fff;border-color:var(--emerald)}
-.btn.primary:hover{background:var(--emerald-600)}
-.btn.ghost{background:#fff;color:var(--graphite)}
-.btn:active{transform:translateY(1px)}
-
-/* ====== Преимущества ====== */
-.reasons{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}
-.reason{display:flex;gap:12px;align-items:flex-start;background:linear-gradient(180deg,#ffffff, #fbfaf7);border:1px solid #00000010;border-radius:16px;padding:14px 16px;box-shadow:0 6px 20px #00000008}
-.ico{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:var(--emerald);color:#fff;font-weight:700}
-.reason-title{font-weight:700}
-.reason-sub{font-size:14px;color:var(--muted)}
-
-/* ====== Фильтры ====== */
-.card{background:var(--card);border:1px solid #00000012;border-radius:16px;box-shadow:0 10px 24px #0000000a;padding:14px 14px}
-.filter-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr 1fr;gap:10px}
-.input{width:100%;appearance:none;border:1px solid #00000020;border-radius:12px;padding:12px 12px;background:#fff;color:var(--graphite)}
-.input:focus{outline:none;box-shadow:var(--ring);border-color:var(--emerald)}
-
-/* ====== Сетка карточек каталога ====== */
-.grid{margin-top:14px;display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
-@media (max-width:1100px){.grid{grid-template-columns:repeat(8,1fr)}}
-@media (max-width:700px){
-  .reasons{grid-template-columns:1fr}
-  .filter-grid{grid-template-columns:1fr 1fr;grid-auto-rows:auto}
-  .hero h1{font-size:28px}
+.card:hover, .feature-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
 }
-.card.product{grid-column:span 4;background:var(--card);border:1px solid #00000012;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 12px 30px #0000000b}
-@media (max-width:1100px){.card.product{grid-column:span 4}}
-@media (max-width:700px){.card.product{grid-column:span 8}}
-.product img{width:100%;aspect-ratio:4/3;object-fit:cover;background:#f2f2f2}
-.ph{display:grid;place-items:center;width:100%;aspect-ratio:4/3;background:repeating-linear-gradient(45deg,#f3efe6,#f3efe6 18px,#eee7dc 18px,#eee7dc 36px);color:#9aa7b4}
-.pad{padding:12px}
-.badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}
-.badge{background:#eef6f4;color:var(--emerald-600);border:1px solid #bfe3de;border-radius:999px;padding:4px 10px;font-size:12px}
-.price{font-weight:800;margin:4px 0 10px}
-.actions{display:flex;gap:8px}
-.actions .btn{flex:1}
 
-/* ====== Футер ====== */
-.site-footer{margin-top:36px;padding:22px 0;border-top:1px solid #00000012;background:linear-gradient(0deg,#fff,#fff0)}
-.footer-inner{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
-.footer-inner a{color:var(--emerald-600);text-decoration:none}
-.footer-inner a:hover{text-decoration:underline}
+/* ====== КНОПКИ ====== */
+.btn-primary {
+  background-color: #007F5F;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #009E73; /* ярче при наведении */
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: #FFFFFF;
+  border: 2px solid #E6E1DC;
+  color: #222;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #FAF6F1;
+  border-color: #007F5F;
+  color: #007F5F;
+}
+
+/* ====== ЗАГОЛОВКИ ====== */
+h1, h2, h3 {
+  color: #1A1A1A;
+  font-weight: bold;
+}
+
+p {
+  color: #444;
+  line-height: 1.6;
+}
