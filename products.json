@@ -1,1318 +1,1640 @@
 [
   {
-    "id": "muslin-4l-solid",
-    "name": "Муслин 4 слоя — однотон",
+    "id": "muslin-1",
+    "name": "Муслин позиция 1",
     "category": "Муслин",
-    "kind": "4 слоя",
+    "kind": "Классический",
     "print": "Однотон",
     "composition": "100% хлопок",
-    "width_cm": "240–250",
-    "price_usd": 9.5,
-    "images": ["/assets/img/muslin-4l-solid.jpg"],
-    "variants": [
-      {"color":"Белый","sku":"MSL4-W","image":"/assets/img/muslin-4l-solid.jpg"},
-      {"color":"Голубой","sku":"MSL4-B","image":"/assets/img/muslin-4l-solid.jpg"}
-    ]
+    "width_cm": "240",
+    "price_usd": 3.0,
+    "images": [
+      "/assets/img/muslin-1.jpg"
+    ],
+    "variants": []
   },
   {
-    "id": "muslin-2l-solid",
-    "name": "Муслин 2 слоя — однотон",
-    "category": "Муслин",
-    "kind": "2 слоя",
-    "print": "Однотон",
-    "composition": "100% хлопок",
-    "width_cm": 160,
-    "price_usd": 4.8,
-    "images": ["/assets/img/muslin-2l-solid.jpg"]
-  },
-  {
-    "id": "muslin-4l-stripe",
-    "name": "Муслин 4 слоя — полоски",
-    "category": "Муслин",
-    "kind": "4 слоя",
-    "print": "Полоска",
-    "composition": "100% хлопок",
-    "width_cm": "240–250",
-    "price_usd": 11,
-    "images": ["/assets/img/muslin-4l-stripe.jpg"]
-  },
-  {
-    "id": "muslin-2l-stripe",
-    "name": "Муслин 2 слоя — полоски",
-    "category": "Муслин",
-    "kind": "2 слоя",
-    "print": "Полоска",
-    "composition": "100% хлопок",
-    "width_cm": 160,
-    "price_usd": 5.0,
-    "images": ["/assets/img/muslin-2l-stripe.jpg"]
-  },
-  {
-    "id": "muslin-jacquard",
-    "name": "Муслин — жаккард",
-    "category": "Муслин",
-    "kind": "Жаккард",
-    "print": "Жаккард",
-    "composition": "100% хлопок",
-    "width_cm": 0,
-    "price_usd": 0.0,
-    "images": ["/assets/img/muslin-jacquard.jpg"]
-  },
-  {
-    "id": "muslin-hemp",
-    "name": "Муслин — конопляный",
-    "category": "Муслин",
-    "kind": "Конопляный",
-    "print": "Однотон",
-    "composition": "Хлопок/Конопля",
-    "width_cm": 240,
-    "price_usd": 7.45,
-    "images": ["/assets/img/muslin-hemp.jpg"]
-  },
-  {
-    "id": "muslin-flannel",
-    "name": "Муслин с начёсом (фланель)",
-    "category": "Муслин",
-    "kind": "С начёсом",
-    "print": "Однотон",
-    "composition": "100% хлопок",
-    "width_cm": 155,
-    "price_usd": 5.35,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "muslin-linen",
-    "name": "Муслин льняной",
-    "category": "Муслин",
-    "kind": "Льняной",
-    "print": "Однотон",
-    "composition": "Хлопок/Лён",
-    "width_cm": 145,
-    "price_usd": 4.5,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "muslin-linen-effect",
-    "name": "Муслин с эффектом льна",
-    "category": "Муслин",
-    "kind": "Эффект льна",
-    "print": "Однотон",
-    "composition": "Хлопок/ПЭ",
-    "width_cm": 150,
-    "price_usd": 6.0,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "muslin-2l-printed",
-    "name": "Муслин 2 слоя — принтованный",
-    "category": "Муслин",
-    "kind": "2 слоя",
-    "print": "Ротация",
-    "composition": "100% хлопок",
-    "width_cm": 150,
-    "price_usd": 5.2,
-    "images": ["/assets/img/muslin-2l-printed.jpg"]
-  },
-  {
-    "id": "muslin-check-solid",
-    "name": "Муслин клетка (пелёночный) — однотон",
-    "category": "Муслин",
-    "kind": "Клетка",
-    "print": "Однотон",
-    "composition": "100% хлопок",
-    "width_cm": 160,
-    "price_usd": 3,
-    "images": ["/assets/img/muslin-check-solid.jpg"]
-  },
-  {
-    "id": "muslin-check-rotary",
-    "name": "Муслин клетка — ротационный принт",
-    "category": "Муслин",
-    "kind": "Клетка",
-    "print": "Ротация",
-    "composition": "100% хлопок",
-    "width_cm": 160,
-    "price_usd": 3,
-    "images": ["/assets/img/muslin-check-rotary.jpg"]
-  },
-  {
-    "id": "muslin-check-digital",
-    "name": "Муслин клетка — цифровая печать (5D)",
-    "category": "Муслин",
-    "kind": "Клетка",
-    "print": "Цифровая",
-    "composition": "100% хлопок",
-    "width_cm": 160,
-    "price_usd": 0.0,
-    "images": ["/assets/img/muslin-check-digital.jpg"]
-  },
-
-  {
-    "id": "poplin-solid",
-    "name": "Поплин — однотон",
+    "id": "poplin-2",
+    "name": "Поплин позиция 2",
     "category": "Поплин",
     "kind": "Классический",
     "print": "Однотон",
     "composition": "100% хлопок",
-    "width_cm": 240,
-    "price_usd": 2.8,
-    "images": ["/assets/img/poplin-solid.jpg"]
-  },
-  {
-    "id": "poplin-rotary",
-    "name": "Поплин — ротационная печать",
-    "category": "Поплин",
-    "kind": "Классический",
-    "print": "Ротация",
-    "composition": "100% хлопок",
-    "width_cm": 240,
-    "price_usd": 2.8,
-    "images": ["/assets/img/poplin-rotary.jpg"]
-  },
-  {
-    "id": "poplin-digital",
-    "name": "Поплин — цифровая печать (5D)",
-    "category": "Поплин",
-    "kind": "Классический",
-    "print": "Цифровая",
-    "composition": "100% хлопок",
-    "width_cm": 240,
-    "price_usd": 4,
-    "images": ["/assets/img/poplin-digital.jpg"]
-  },
-  {
-    "id": "poplin-jacquard",
-    "name": "Поплин — жаккард",
-    "category": "Поплин",
-    "kind": "Жаккард",
-    "print": "Жаккард",
-    "composition": "100% хлопок",
-    "width_cm": 240,
-    "price_usd": 0.0,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "poplin-matvays",
-    "name": "Поплин — матвайс",
-    "category": "Поплин",
-    "kind": "Матвайс",
-    "print": "Однотон",
-    "composition": "100% хлопок",
-    "width_cm": 240,
-    "price_usd": 0.0,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "poplin-gofre",
-    "name": "Поплин — гофре",
-    "category": "Поплин",
-    "kind": "Гофре",
-    "print": "Однотон",
-    "composition": "100% хлопок",
-    "width_cm": 240,
-    "price_usd": 2.9,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "poplin-varenny",
-    "name": "Поплин — варёный",
-    "category": "Поплин",
-    "kind": "Варёный",
-    "print": "Однотон",
-    "composition": "100% хлопок",
-    "width_cm": 235,
+    "width_cm": "240",
     "price_usd": 3.5,
-    "images": ["/assets/img/poplin-varenny.jpg"]
+    "images": [
+      "/assets/img/poplin-2.jpg"
+    ],
+    "variants": []
   },
-
   {
-    "id": "satin-solid",
-    "name": "Сатин — однотон",
+    "id": "satin-3",
+    "name": "Сатин позиция 3",
     "category": "Сатин",
     "kind": "Классический",
     "print": "Однотон",
     "composition": "100% хлопок",
-    "width_cm": 240,
-    "price_usd": 5.2,
-    "images": ["/assets/img/satin-solid.jpg"]
+    "width_cm": "240",
+    "price_usd": 4.0,
+    "images": [
+      "/assets/img/satin-3.jpg"
+    ],
+    "variants": []
   },
   {
-    "id": "satin-stripe-05",
-    "name": "Сатин страйп — 0.5 см",
-    "category": "Сатин",
-    "kind": "Страйп 0.5 см",
-    "print": "Полоска",
+    "id": "flannel-4",
+    "name": "Фланель позиция 4",
+    "category": "Фланель",
+    "kind": "Классический",
+    "print": "Однотон",
     "composition": "100% хлопок",
-    "width_cm": 240,
-    "price_usd": 5.4,
-    "images": ["/assets/placeholder.jpg"]
+    "width_cm": "240",
+    "price_usd": 4.5,
+    "images": [
+      "/assets/img/flannel-4.jpg"
+    ],
+    "variants": []
   },
   {
-    "id": "satin-stripe-1",
-    "name": "Сатин страйп — 1 см",
-    "category": "Сатин",
-    "kind": "Страйп 1 см",
-    "print": "Полоска",
+    "id": "duck-5",
+    "name": "Дак позиция 5",
+    "category": "Дак",
+    "kind": "Классический",
+    "print": "Однотон",
     "composition": "100% хлопок",
-    "width_cm": 240,
-    "price_usd": 5.4,
-    "images": ["/assets/placeholder.jpg"]
+    "width_cm": "240",
+    "price_usd": 5.0,
+    "images": [
+      "/assets/img/duck-5.jpg"
+    ],
+    "variants": []
   },
   {
-    "id": "satin-stripe-2",
-    "name": "Сатин страйп — 2 см",
-    "category": "Сатин",
-    "kind": "Страйп 2 см",
-    "print": "Полоска",
+    "id": "linens-6",
+    "name": "Линенс позиция 6",
+    "category": "Линенс",
+    "kind": "Классический",
+    "print": "Однотон",
     "composition": "100% хлопок",
-    "width_cm": 240,
-    "price_usd": 5.6,
-    "images": ["/assets/placeholder.jpg"]
+    "width_cm": "240",
+    "price_usd": 5.5,
+    "images": [
+      "/assets/img/linens-6.jpg"
+    ],
+    "variants": []
   },
   {
-    "id": "satin-stripe-3",
-    "name": "Сатин страйп — 3 см",
-    "category": "Сатин",
-    "kind": "Страйп 3 см",
-    "print": "Полоска",
+    "id": "knit-7",
+    "name": "Трикотаж позиция 7",
+    "category": "Трикотаж",
+    "kind": "Классический",
+    "print": "Однотон",
     "composition": "100% хлопок",
-    "width_cm": 240,
-    "price_usd": 5.8,
-    "images": ["/assets/placeholder.jpg"]
+    "width_cm": "240",
+    "price_usd": 6.0,
+    "images": [
+      "/assets/img/knit-7.jpg"
+    ],
+    "variants": []
   },
   {
-    "id": "satin-jacquard",
-    "name": "Сатин — жаккард",
-    "category": "Сатин",
-    "kind": "Жаккард",
-    "print": "Жаккард",
+    "id": "eco-8",
+    "name": "Эко-ткани позиция 8",
+    "category": "Эко-ткани",
+    "kind": "Классический",
+    "print": "Однотон",
     "composition": "100% хлопок",
-    "width_cm": 240,
+    "width_cm": "240",
     "price_usd": 6.5,
-    "images": ["/assets/placeholder.jpg"]
+    "images": [
+      "/assets/img/eco-8.jpg"
+    ],
+    "variants": []
   },
   {
-    "id": "satin-rotary",
-    "name": "Сатин — ротационный принт",
-    "category": "Сатин",
-    "kind": "Классический",
-    "print": "Ротация",
-    "composition": "100% хлопок",
-    "width_cm": 240,
-    "price_usd": 5.6,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "satin-digital",
-    "name": "Сатин — цифровая печать (5D)",
-    "category": "Сатин",
-    "kind": "Классический",
-    "print": "Цифровая",
-    "composition": "100% хлопок",
-    "width_cm": 240,
-    "price_usd": 6.2,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "satin-300tc",
-    "name": "Сатин 300TC (люкс)",
-    "category": "Сатин",
-    "kind": "300TC",
-    "print": "Однотон",
-    "composition": "100% хлопок",
-    "width_cm": 280,
-    "price_usd": 6.9,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "satin-tencel",
-    "name": "Сатин Тенсель (хлопок+лиоцелл)",
-    "category": "Сатин",
-    "kind": "Тенсель",
-    "print": "Однотон",
-    "composition": "Хлопок/Вискоза (лиоцел)",
-    "width_cm": 240,
-    "price_usd": 7.8,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "satin-wide",
-    "name": "Сатин 280–300 см",
-    "category": "Сатин",
-    "kind": "Широкий 280–300",
-    "print": "Однотон",
-    "composition": "100% хлопок",
-    "width_cm": 300,
-    "price_usd": 6.4,
-    "images": ["/assets/placeholder.jpg"]
-  },
-
-  {
-    "id": "flannel-solid",
-    "name": "Фланель — однотон",
-    "category": "Фланель",
-    "kind": "Классическая",
-    "print": "Однотон",
-    "composition": "100% хлопок",
-    "width_cm": 240,
-    "price_usd": 4.9,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "flannel-rotary",
-    "name": "Фланель — ротационный принт",
-    "category": "Фланель",
-    "kind": "Классическая",
-    "print": "Ротация",
-    "composition": "100% хлопок",
-    "width_cm": 240,
-    "price_usd": 5.1,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "flannel-digital",
-    "name": "Фланель — цифровая печать",
-    "category": "Фланель",
-    "kind": "Классическая",
-    "print": "Цифровая",
-    "composition": "100% хлопок",
-    "width_cm": 240,
-    "price_usd": 5.6,
-    "images": ["/assets/placeholder.jpg"]
-  },
-
-  {
-    "id": "duck-solid",
-    "name": "Дак — однотон",
-    "category": "Дак",
+    "id": "dress-9",
+    "name": "Плательные позиция 9",
+    "category": "Плательные",
     "kind": "Классический",
     "print": "Однотон",
-    "composition": "65/35 хлопок/полиэстер",
-    "width_cm": 280,
-    "price_usd": 4.8,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "duck-solid-100c",
-    "name": "Дак — однотон (100% хлопок)",
-    "category": "Дак",
-    "kind": "100% хлопок",
-    "print": "Однотон",
     "composition": "100% хлопок",
-    "width_cm": 280,
-    "price_usd": 5.2,
-    "images": ["/assets/placeholder.jpg"]
+    "width_cm": "240",
+    "price_usd": 7.0,
+    "images": [
+      "/assets/img/dress-9.jpg"
+    ],
+    "variants": []
   },
   {
-    "id": "duck-rotary",
-    "name": "Дак — ротационный принт",
-    "category": "Дак",
-    "kind": "Классический",
-    "print": "Ротация",
-    "composition": "65/35 хлопок/полиэстер",
-    "width_cm": 280,
-    "price_usd": 5.1,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "duck-digital",
-    "name": "Дак — цифровая печать (5D)",
-    "category": "Дак",
-    "kind": "Классический",
-    "print": "Цифровая",
-    "composition": "65/35 хлопок/полиэстер",
-    "width_cm": 280,
-    "price_usd": 5.7,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "duck-jacquard",
-    "name": "Дак — жаккард",
-    "category": "Дак",
-    "kind": "Жаккард",
-    "print": "Жаккард",
-    "composition": "65/35 хлопок/полиэстер",
-    "width_cm": 280,
-    "price_usd": 5.9,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "duck-wide",
-    "name": "Дак 220–300 см",
-    "category": "Дак",
-    "kind": "Широкий 220–300",
-    "print": "Однотон",
-    "composition": "65/35 хлопок/полиэстер",
-    "width_cm": 300,
-    "price_usd": 5.0,
-    "images": ["/assets/placeholder.jpg"]
-  },
-
-  {
-    "id": "linens-poly-solid",
-    "name": "Линенс (имитация льна, 100% ПЭ) — однотон/глиттер",
-    "category": "Линенс",
-    "kind": "Имитация льна",
-    "print": "Однотон",
-    "composition": "100% полиэстер",
-    "width_cm": 300,
-    "price_usd": 3.9,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "linens-embroidery",
-    "name": "Линенс — с вышивкой (кружевной)",
-    "category": "Линенс",
-    "kind": "Вышивка",
-    "print": "Декор",
-    "composition": "ПЭ/хлопок",
-    "width_cm": 300,
-    "price_usd": 5.5,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "linens-printed",
-    "name": "Линенс — принтованный",
-    "category": "Линенс",
-    "kind": "Принт",
-    "print": "Ротация",
-    "composition": "ПЭ/хлопок",
-    "width_cm": 300,
-    "price_usd": 4.2,
-    "images": ["/assets/placeholder.jpg"]
-  },
-
-  {
-    "id": "futer-3n-brushed",
-    "name": "Футер 3-нитка с начёсом",
-    "category": "Трикотаж",
-    "kind": "Футер 3-нитка",
-    "print": "Однотон",
-    "composition": "Хлопок/ПЭ",
-    "width_cm": 180,
-    "price_usd": 7.2,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "futer-3n-diagonal",
-    "name": "Футер 3-нитка диагональ",
-    "category": "Трикотаж",
-    "kind": "Футер 3-нитка",
-    "print": "Диагональ",
-    "composition": "Хлопок/ПЭ",
-    "width_cm": 180,
-    "price_usd": 7.5,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "futer-3n-velour",
-    "name": "Футер 3-нитка с эффектом велюра",
-    "category": "Трикотаж",
-    "kind": "Футер 3-нитка",
-    "print": "Однотон",
-    "composition": "Хлопок/ПЭ",
-    "width_cm": 180,
-    "price_usd": 7.9,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "futer-3n-printed",
-    "name": "Футер 3-нитка — принт",
-    "category": "Трикотаж",
-    "kind": "Футер 3-нитка",
-    "print": "Принт",
-    "composition": "Хлопок/ПЭ",
-    "width_cm": 180,
-    "price_usd": 8.2,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "futer-3n-100c",
-    "name": "Футер 3-нитка — 100% хлопок",
-    "category": "Трикотаж",
-    "kind": "Футер 3-нитка",
-    "print": "Однотон",
-    "composition": "100% хлопок",
-    "width_cm": 180,
-    "price_usd": 8.9,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "futer-2n",
-    "name": "Футер 2-нитка",
-    "category": "Трикотаж",
-    "kind": "Футер 2-нитка",
-    "print": "Однотон",
-    "composition": "Хлопок/ПЭ",
-    "width_cm": 180,
-    "price_usd": 6.2,
-    "images": ["/assets/placeholder.jpg"]
-  },
-
-  {
-    "id": "kulirka-260",
-    "name": "Кулирка 260 г/м²",
-    "category": "Трикотаж",
-    "kind": "Кулирка",
-    "print": "Однотон",
-    "composition": "Хлопок/Эластан",
-    "width_cm": 180,
-    "price_usd": 6.0,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "kulirka-190-200",
-    "name": "Кулирка 190–200 г/м²",
-    "category": "Трикотаж",
-    "kind": "Кулирка",
-    "print": "Однотон",
-    "composition": "Хлопок",
-    "width_cm": 180,
-    "price_usd": 4.9,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "kulirka-elastan",
-    "name": "Кулирка с эластаном (разные плотности)",
-    "category": "Трикотаж",
-    "kind": "Кулирка",
-    "print": "Однотон",
-    "composition": "Хлопок/Эластан",
-    "width_cm": 180,
-    "price_usd": 5.6,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "kulirka-printed",
-    "name": "Кулирка — принт",
-    "category": "Трикотаж",
-    "kind": "Кулирка",
-    "print": "Принт",
-    "composition": "Хлопок/Эластан",
-    "width_cm": 180,
-    "price_usd": 5.9,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "kulirka-digital",
-    "name": "Кулирка — цифровая печать",
-    "category": "Трикотаж",
-    "kind": "Кулирка",
-    "print": "Цифровая",
-    "composition": "Хлопок/Эластан",
-    "width_cm": 180,
-    "price_usd": 6.4,
-    "images": ["/assets/placeholder.jpg"]
-  },
-
-  {
-    "id": "pique-lacoste-200",
-    "name": "Пике Лакост — 200 г/м²",
-    "category": "Трикотаж",
-    "kind": "Пике Лакост",
-    "print": "Однотон",
-    "composition": "Хлопок/ПЭ",
-    "width_cm": 180,
-    "price_usd": 5.1,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "pique-lacoste-220",
-    "name": "Пике Лакост — 220 г/м²",
-    "category": "Трикотаж",
-    "kind": "Пике Лакост",
-    "print": "Однотон",
-    "composition": "Хлопок/ПЭ",
-    "width_cm": 180,
-    "price_usd": 5.4,
-    "images": ["/assets/placeholder.jpg"]
-  },
-
-  {
-    "id": "interlock",
-    "name": "Интерлок",
-    "category": "Трикотаж",
-    "kind": "Интерлок",
-    "print": "Однотон",
-    "composition": "Хлопок",
-    "width_cm": 180,
-    "price_usd": 5.2,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "ribana-transfer",
-    "name": "Рибана — трансферная",
-    "category": "Трикотаж",
-    "kind": "Рибана",
-    "print": "Однотон",
-    "composition": "Хлопок/Эластан",
-    "width_cm": 110,
-    "price_usd": 4.8,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "lapsha",
-    "name": "Лапша",
-    "category": "Трикотаж",
-    "kind": "Лапша",
-    "print": "Однотон",
-    "composition": "Хлопок/Эластан",
-    "width_cm": 140,
-    "price_usd": 5.0,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "lapsha-printed",
-    "name": "Лапша — принтованная",
-    "category": "Трикотаж",
-    "kind": "Лапша",
-    "print": "Принт",
-    "composition": "Хлопок/Эластан",
-    "width_cm": 140,
-    "price_usd": 5.4,
-    "images": ["/assets/placeholder.jpg"]
-  },
-
-  {
-    "id": "tencel-fabric",
-    "name": "Тенсель",
-    "category": "Эко-ткани",
-    "kind": "Тенсель",
-    "print": "Однотон",
-    "composition": "Вискоза (лиоцел)",
-    "width_cm": 150,
-    "price_usd": 7.9,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "modal-fabric",
-    "name": "Модал",
-    "category": "Эко-ткани",
-    "kind": "Модал",
-    "print": "Однотон",
-    "composition": "Вискоза (модал)",
-    "width_cm": 150,
-    "price_usd": 6.9,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "cupro-fabric",
-    "name": "Купра (Cupro)",
-    "category": "Эко-ткани",
-    "kind": "Купра",
-    "print": "Однотон",
-    "composition": "Вискоза (купро)",
-    "width_cm": 140,
-    "price_usd": 9.9,
-    "images": ["/assets/placeholder.jpg"]
-  },
-
-  {
-    "id": "broderie-anglaise-voile",
-    "name": "Шитьё (Прошва) на вуали",
-    "category": "Плательные",
-    "kind": "Прошва",
-    "print": "Декор",
-    "composition": "100% хлопок",
-    "width_cm": 140,
-    "price_usd": 7.2,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "broderie-anglaise-poplin",
-    "name": "Шитьё (Прошва) на поплине",
-    "category": "Плательные",
-    "kind": "Прошва",
-    "print": "Декор",
-    "composition": "100% хлопок",
-    "width_cm": 140,
-    "price_usd": 7.5,
-    "images": ["/assets/placeholder.jpg"]
-  },
-
-  {
-    "id": "shtapel",
-    "name": "Штапель",
-    "category": "Плательные",
-    "kind": "Штапель",
-    "print": "Однотон",
-    "composition": "Вискоза",
-    "width_cm": 140,
-    "price_usd": 4.6,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "belmondo",
-    "name": "Бельмондо",
-    "category": "Плательные",
-    "kind": "Бельмондо",
-    "print": "Однотон",
-    "composition": "ПЭ/Вискоза",
-    "width_cm": 150,
-    "price_usd": 5.8,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "viscose-satin",
-    "name": "Вискозный сатин",
-    "category": "Плательные",
-    "kind": "Сатин",
-    "print": "Однотон",
-    "composition": "Вискоза",
-    "width_cm": 140,
-    "price_usd": 6.4,
-    "images": ["/assets/placeholder.jpg"]
-  },
-
-  {
-    "id": "linen-solid",
-    "name": "Лён — однотон",
+    "id": "linen-10",
+    "name": "Лён позиция 10",
     "category": "Лён",
     "kind": "Классический",
     "print": "Однотон",
-    "composition": "100% лён",
-    "width_cm": 150,
-    "price_usd": 8.9,
-    "images": ["/assets/placeholder.jpg"]
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 2.5,
+    "images": [
+      "/assets/img/linen-10.jpg"
+    ],
+    "variants": []
   },
   {
-    "id": "linen-printed",
-    "name": "Лён — принтованный",
-    "category": "Лён",
-    "kind": "Принт",
-    "print": "Принт",
-    "composition": "Лён/Вискоза",
-    "width_cm": 150,
-    "price_usd": 9.2,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "linen-eco-300",
-    "name": "Лён (100% эко) — 300 см",
-    "category": "Лён",
-    "kind": "Широкий 300",
-    "print": "Однотон",
-    "composition": "100% лён",
-    "width_cm": 300,
-    "price_usd": 12.9,
-    "images": ["/assets/placeholder.jpg"]
-  },
-
-  {
-    "id": "tulle-hayal",
-    "name": "Фатин Хаяль / сетки",
+    "id": "tulle-11",
+    "name": "Сетки позиция 11",
     "category": "Сетки",
-    "kind": "Хаяль",
+    "kind": "Классический",
     "print": "Однотон",
-    "composition": "ПЭ",
-    "width_cm": 300,
-    "price_usd": 2.8,
-    "images": ["/assets/placeholder.jpg"]
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 3.0,
+    "images": [
+      "/assets/img/tulle-11.jpg"
+    ],
+    "variants": []
   },
   {
-    "id": "tulle-crystal",
-    "name": "Фатин Кристаль",
-    "category": "Сетки",
-    "kind": "Кристаль",
-    "print": "Однотон",
-    "composition": "ПЭ",
-    "width_cm": 300,
-    "price_usd": 3.2,
-    "images": ["/assets/placeholder.jpg"]
-  },
-
-  {
-    "id": "denim",
-    "name": "Джинсовые ткани",
+    "id": "denim-12",
+    "name": "Деним позиция 12",
     "category": "Деним",
-    "kind": "10–14 oz",
-    "print": "Однотон",
-    "composition": "Хлопок/Эластан",
-    "width_cm": 150,
-    "price_usd": 6.2,
-    "images": ["/assets/placeholder.jpg"]
-  },
-
-  {
-    "id": "poplin-shirt",
-    "name": "Поплин рубашечный",
-    "category": "Рубашечные",
-    "kind": "Рубашечный",
-    "print": "Однотон",
-    "composition": "Хлопок/ПЭ",
-    "width_cm": 150,
-    "price_usd": 3.9,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "voile-batiste",
-    "name": "Вуаль (батист)",
-    "category": "Рубашечные",
-    "kind": "Вуаль/Батист",
-    "print": "Однотон",
-    "composition": "Хлопок",
-    "width_cm": 140,
-    "price_usd": 4.4,
-    "images": ["/assets/placeholder.jpg"]
-  },
-
-  {
-    "id": "velvet-cotton-hypo",
-    "name": "Бархат люкс 100% хлопок (гипоаллерг.)",
-    "category": "Бархат",
-    "kind": "Хлопковый бархат",
+    "kind": "Классический",
     "print": "Однотон",
     "composition": "100% хлопок",
-    "width_cm": 140,
-    "price_usd": 14.9,
-    "images": ["/assets/placeholder.jpg"]
+    "width_cm": "240",
+    "price_usd": 3.5,
+    "images": [
+      "/assets/img/denim-12.jpg"
+    ],
+    "variants": []
   },
   {
-    "id": "velvet-silk",
-    "name": "Шёлковый бархат",
-    "category": "Бархат",
-    "kind": "Шёлковый",
+    "id": "shirt-13",
+    "name": "Рубашечные позиция 13",
+    "category": "Рубашечные",
+    "kind": "Классический",
     "print": "Однотон",
-    "composition": "Шёлк/Вискоза",
-    "width_cm": 135,
-    "price_usd": 22.0,
-    "images": ["/assets/placeholder.jpg"]
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 4.0,
+    "images": [
+      "/assets/img/shirt-13.jpg"
+    ],
+    "variants": []
   },
-
   {
-    "id": "silk-printed",
-    "name": "Шёлк — принтованный",
+    "id": "velvet-14",
+    "name": "Бархат позиция 14",
+    "category": "Бархат",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 4.5,
+    "images": [
+      "/assets/img/velvet-14.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "silk-15",
+    "name": "Шёлк позиция 15",
     "category": "Шёлк",
-    "kind": "Шёлк",
-    "print": "Принт",
-    "composition": "100% шёлк",
-    "width_cm": 135,
-    "price_usd": 19.0,
-    "images": ["/assets/placeholder.jpg"]
-  },
-
-  {
-    "id": "viscose-jersey-lycra",
-    "name": "Вискозная кулирка с лайкрой (шелковистый)",
-    "category": "Трикотаж",
-    "kind": "Вискозная кулирка",
-    "print": "Однотон",
-    "composition": "Вискоза/Эластан",
-    "width_cm": 170,
-    "price_usd": 5.9,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "viscose-jersey-turlu",
-    "name": "Вискозная кулирка (турлу)",
-    "category": "Трикотаж",
-    "kind": "Вискозная кулирка",
-    "print": "Однотон",
-    "composition": "Вискоза",
-    "width_cm": 170,
-    "price_usd": 5.5,
-    "images": ["/assets/placeholder.jpg"]
-  },
-
-  {
-    "id": "tweed-chanel",
-    "name": "Твид — Шанель",
-    "category": "Костюмные",
-    "kind": "Твид Шанель",
-    "print": "Фактура",
-    "composition": "ПЭ/Вискоза/Хлопок",
-    "width_cm": 145,
-    "price_usd": 12.0,
-    "images": ["/assets/placeholder.jpg"]
-  },
-
-  {
-    "id": "quilted-outer",
-    "name": "Стёганые ткани (верхняя одежда)",
-    "category": "Утеплитель",
-    "kind": "Стёганые",
-    "print": "Стёжка",
-    "composition": "ПЭ + синтепон",
-    "width_cm": 150,
-    "price_usd": 7.9,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "plashovka",
-    "name": "Плащёвка",
-    "category": "Техтъкани",
-    "kind": "Плащёвка",
-    "print": "Однотон",
-    "composition": "ПЭ",
-    "width_cm": 150,
-    "price_usd": 3.8,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "faux-leather-velvet",
-    "name": "Искусственная кожа с французским вельветом",
-    "category": "Техтъкани",
-    "kind": "Кожа + вельвет",
-    "print": "Фактура",
-    "composition": "ПУ/ПЭ",
-    "width_cm": 140,
-    "price_usd": 9.5,
-    "images": ["/assets/placeholder.jpg"]
-  },
-
-  {
-    "id": "mahra-panel",
-    "name": "Махра купонами",
-    "category": "Махра",
-    "kind": "Купоны",
-    "print": "Принт",
-    "composition": "Хлопок/ПЭ",
-    "width_cm": 180,
-    "price_usd": 6.2,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "mahra-cotton",
-    "name": "Махра — хлопок",
-    "category": "Махра",
-    "kind": "100% хлопок",
+    "kind": "Классический",
     "print": "Однотон",
     "composition": "100% хлопок",
-    "width_cm": 180,
-    "price_usd": 6.8,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "mahra-modal",
-    "name": "Махра — модал",
-    "category": "Махра",
-    "kind": "Модал",
-    "print": "Однотон",
-    "composition": "Модал/Хлопок",
-    "width_cm": 180,
-    "price_usd": 7.4,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "mahra-waterproof",
-    "name": "Непромокаемая махра",
-    "category": "Махра",
-    "kind": "Ламинированная",
-    "print": "Однотон",
-    "composition": "Хлопок/ПЭ (PU-слой)",
-    "width_cm": 180,
-    "price_usd": 7.9,
-    "images": ["/assets/placeholder.jpg"]
-  },
-
-  {
-    "id": "pique-quilted-cotton",
-    "name": "Стёганые хлопковые пике",
-    "category": "Пике",
-    "kind": "Стёганые",
-    "print": "Стёжка",
-    "composition": "Хлопок/ПЭ",
-    "width_cm": 240,
-    "price_usd": 6.2,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "pique-quilted-filled",
-    "name": "Стёганые пике с наполнителем",
-    "category": "Пике",
-    "kind": "Стёганые",
-    "print": "Стёжка",
-    "composition": "Хлопок/ПЭ + наполнитель",
-    "width_cm": 240,
-    "price_usd": 6.9,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "pique-waffle",
-    "name": "Вафельные пике",
-    "category": "Пике",
-    "kind": "Вафля",
-    "print": "Фактура",
-    "composition": "Хлопок",
-    "width_cm": 240,
-    "price_usd": 4.6,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "waffle-chess",
-    "name": "Шахматная вафля",
-    "category": "Пике",
-    "kind": "Вафля «шахматка»",
-    "print": "Фактура",
-    "composition": "Хлопок",
-    "width_cm": 240,
-    "price_usd": 4.8,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "waffle-greek",
-    "name": "Греческая вафля",
-    "category": "Пике",
-    "kind": "Вафля «греческая»",
-    "print": "Фактура",
-    "composition": "Хлопок",
-    "width_cm": 240,
-    "price_usd": 4.8,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "waffle-mix",
-    "name": "Микс вафля",
-    "category": "Пике",
-    "kind": "Микс вафель",
-    "print": "Фактура",
-    "composition": "Хлопок/ПЭ",
-    "width_cm": 240,
-    "price_usd": 4.4,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "waffle-greek-luxsoft",
-    "name": "Люкс Софт — греческая вафля",
-    "category": "Пике",
-    "kind": "Люкс Софт",
-    "print": "Фактура",
-    "composition": "Хлопок/Микрофибра",
-    "width_cm": 240,
-    "price_usd": 5.6,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "knit-pique-braid",
-    "name": "Вязаное пике «косичка»",
-    "category": "Пике",
-    "kind": "Вязаное",
-    "print": "Фактура",
-    "composition": "Хлопок/ПЭ",
-    "width_cm": 200,
-    "price_usd": 5.2,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "knit-cotton-dot",
-    "name": "Вязаный хлопок — пунктир пике",
-    "category": "Пике",
-    "kind": "Вязаное",
-    "print": "Пунктир",
-    "composition": "Хлопок",
-    "width_cm": 200,
-    "price_usd": 5.4,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "quilted-cotton-dot",
-    "name": "Стёганый хлопок — пунктир пике",
-    "category": "Пике",
-    "kind": "Стёганые",
-    "print": "Пунктир",
-    "composition": "Хлопок/ПЭ",
-    "width_cm": 240,
-    "price_usd": 6.0,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "pique-kids-applique",
-    "name": "Хлопковые пике с аппликациями (детские)",
-    "category": "Пике",
-    "kind": "Аппликации",
-    "print": "Декор",
-    "composition": "Хлопок",
-    "width_cm": 240,
-    "price_usd": 6.2,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "waffle-authentic",
-    "name": "Аутентичная вафля",
-    "category": "Пике",
-    "kind": "Аутентичная",
-    "print": "Фактура",
-    "composition": "Хлопок",
-    "width_cm": 240,
+    "width_cm": "240",
     "price_usd": 5.0,
-    "images": ["/assets/placeholder.jpg"]
+    "images": [
+      "/assets/img/silk-15.jpg"
+    ],
+    "variants": []
   },
   {
-    "id": "pique-tea-quilted",
-    "name": "Чайное пике — стёганное, хлопок 100%",
+    "id": "pique-16",
+    "name": "Пике позиция 16",
     "category": "Пике",
-    "kind": "Чайное стёганое",
-    "print": "Стёжка",
+    "kind": "Классический",
+    "print": "Однотон",
     "composition": "100% хлопок",
-    "width_cm": 240,
-    "price_usd": 6.6,
-    "images": ["/assets/placeholder.jpg"]
+    "width_cm": "240",
+    "price_usd": 5.5,
+    "images": [
+      "/assets/img/pique-16.jpg"
+    ],
+    "variants": []
   },
-
   {
-    "id": "burlap",
-    "name": "Мешковина",
+    "id": "mahra-17",
+    "name": "Махра позиция 17",
+    "category": "Махра",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 6.0,
+    "images": [
+      "/assets/img/mahra-17.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "decor-18",
+    "name": "Декоративные позиция 18",
     "category": "Декоративные",
-    "kind": "Джутовая ткань",
-    "print": "Фактура",
-    "composition": "Джут",
-    "width_cm": 150,
-    "price_usd": 2.9,
-    "images": ["/assets/placeholder.jpg"]
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 6.5,
+    "images": [
+      "/assets/img/decor-18.jpg"
+    ],
+    "variants": []
   },
   {
-    "id": "jute",
-    "name": "Жут",
-    "category": "Декоративные",
-    "kind": "Джут",
-    "print": "Фактура",
-    "composition": "Джут",
-    "width_cm": 150,
-    "price_usd": 3.2,
-    "images": ["/assets/placeholder.jpg"]
+    "id": "notions-19",
+    "name": "Фурнитура позиция 19",
+    "category": "Фурнитура",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 7.0,
+    "images": [
+      "/assets/img/notions-19.jpg"
+    ],
+    "variants": []
   },
   {
-    "id": "linen-50-50",
-    "name": "Лён 50/50",
+    "id": "muslin-20",
+    "name": "Муслин позиция 20",
+    "category": "Муслин",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 2.5,
+    "images": [
+      "/assets/img/muslin-20.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "poplin-21",
+    "name": "Поплин позиция 21",
+    "category": "Поплин",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 3.0,
+    "images": [
+      "/assets/img/poplin-21.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "satin-22",
+    "name": "Сатин позиция 22",
+    "category": "Сатин",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 3.5,
+    "images": [
+      "/assets/img/satin-22.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "flannel-23",
+    "name": "Фланель позиция 23",
+    "category": "Фланель",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 4.0,
+    "images": [
+      "/assets/img/flannel-23.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "duck-24",
+    "name": "Дак позиция 24",
+    "category": "Дак",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 4.5,
+    "images": [
+      "/assets/img/duck-24.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "linens-25",
+    "name": "Линенс позиция 25",
+    "category": "Линенс",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 5.0,
+    "images": [
+      "/assets/img/linens-25.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "knit-26",
+    "name": "Трикотаж позиция 26",
+    "category": "Трикотаж",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 5.5,
+    "images": [
+      "/assets/img/knit-26.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "eco-27",
+    "name": "Эко-ткани позиция 27",
+    "category": "Эко-ткани",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 6.0,
+    "images": [
+      "/assets/img/eco-27.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "dress-28",
+    "name": "Плательные позиция 28",
+    "category": "Плательные",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 6.5,
+    "images": [
+      "/assets/img/dress-28.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "linen-29",
+    "name": "Лён позиция 29",
     "category": "Лён",
-    "kind": "Смесовый 50/50",
+    "kind": "Классический",
     "print": "Однотон",
-    "composition": "Лён/Хлопок 50/50",
-    "width_cm": 150,
-    "price_usd": 6.9,
-    "images": ["/assets/placeholder.jpg"]
-  },
-
-  {
-    "id": "notions-cotton-lace",
-    "name": "Фурнитура — хлопковые кружева",
-    "category": "Фурнитура",
-    "kind": "Кружева",
-    "print": "Декор",
-    "composition": "Хлопок",
-    "width_cm": 0,
-    "price_usd": 0.0,
-    "images": ["/assets/placeholder.jpg"]
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 7.0,
+    "images": [
+      "/assets/img/linen-29.jpg"
+    ],
+    "variants": []
   },
   {
-    "id": "notions-cotton-elastic-lace",
-    "name": "Фурнитура — хлопковые кружевные резинки",
-    "category": "Фурнитура",
-    "kind": "Резинки кружевные",
-    "print": "Декор",
-    "composition": "Хлопок/Эластан",
-    "width_cm": 0,
-    "price_usd": 0.0,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "notions-guipure",
-    "name": "Фурнитура — гюпюр",
-    "category": "Фурнитура",
-    "kind": "Гюпюр",
-    "print": "Декор",
-    "composition": "ПЭ/Хлопок",
-    "width_cm": 0,
-    "price_usd": 0.0,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "notions-lingerie-lace",
-    "name": "Кружева для нижнего белья",
-    "category": "Фурнитура",
-    "kind": "Кружева бельевые",
-    "print": "Декор",
-    "composition": "ПЭ/Эластан",
-    "width_cm": 0,
-    "price_usd": 0.0,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "notions-ruffles",
-    "name": "Рюши",
-    "category": "Фурнитура",
-    "kind": "Рюши",
-    "print": "Декор",
-    "composition": "Разное",
-    "width_cm": 0,
-    "price_usd": 0.0,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "notions-dantel",
-    "name": "Дантель",
-    "category": "Фурнитура",
-    "kind": "Дантель",
-    "print": "Декор",
-    "composition": "Разное",
-    "width_cm": 0,
-    "price_usd": 0.0,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "notions-bias",
-    "name": "Косые бейки",
-    "category": "Фурнитура",
-    "kind": "Бейка косая",
+    "id": "tulle-30",
+    "name": "Сетки позиция 30",
+    "category": "Сетки",
+    "kind": "Классический",
     "print": "Однотон",
-    "composition": "Хлопок/ПЭ",
-    "width_cm": 0,
-    "price_usd": 0.0,
-    "images": ["/assets/placeholder.jpg"]
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 2.5,
+    "images": [
+      "/assets/img/tulle-30.jpg"
+    ],
+    "variants": []
   },
   {
-    "id": "notions-piping",
-    "name": "Канты",
-    "category": "Фурнитура",
-    "kind": "Кант",
+    "id": "denim-31",
+    "name": "Деним позиция 31",
+    "category": "Деним",
+    "kind": "Классический",
     "print": "Однотон",
-    "composition": "Хлопок/ПЭ",
-    "width_cm": 0,
-    "price_usd": 0.0,
-    "images": ["/assets/placeholder.jpg"]
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 3.0,
+    "images": [
+      "/assets/img/denim-31.jpg"
+    ],
+    "variants": []
   },
   {
-    "id": "notions-ribbons",
-    "name": "Ленты",
-    "category": "Фурнитура",
-    "kind": "Ленты",
+    "id": "shirt-32",
+    "name": "Рубашечные позиция 32",
+    "category": "Рубашечные",
+    "kind": "Классический",
     "print": "Однотон",
-    "composition": "Разное",
-    "width_cm": 0,
-    "price_usd": 0.0,
-    "images": ["/assets/placeholder.jpg"]
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 3.5,
+    "images": [
+      "/assets/img/shirt-32.jpg"
+    ],
+    "variants": []
   },
   {
-    "id": "notions-collars",
-    "name": "Воротнички",
-    "category": "Фурнитура",
-    "kind": "Воротнички",
-    "print": "Декор",
-    "composition": "Разное",
-    "width_cm": 0,
-    "price_usd": 0.0,
-    "images": ["/assets/placeholder.jpg"]
-  },
-  {
-    "id": "notions-elastics",
-    "name": "Резинки",
-    "category": "Фурнитура",
-    "kind": "Резинки",
+    "id": "velvet-33",
+    "name": "Бархат позиция 33",
+    "category": "Бархат",
+    "kind": "Классический",
     "print": "Однотон",
-    "composition": "ПЭ/Эластан",
-    "width_cm": 0,
-    "price_usd": 0.0,
-    "images": ["/assets/placeholder.jpg"]
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 4.0,
+    "images": [
+      "/assets/img/velvet-33.jpg"
+    ],
+    "variants": []
   },
   {
-    "id": "notions-appliques",
-    "name": "Аппликации",
+    "id": "silk-34",
+    "name": "Шёлк позиция 34",
+    "category": "Шёлк",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 4.5,
+    "images": [
+      "/assets/img/silk-34.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "pique-35",
+    "name": "Пике позиция 35",
+    "category": "Пике",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 5.0,
+    "images": [
+      "/assets/img/pique-35.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "mahra-36",
+    "name": "Махра позиция 36",
+    "category": "Махра",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 5.5,
+    "images": [
+      "/assets/img/mahra-36.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "decor-37",
+    "name": "Декоративные позиция 37",
+    "category": "Декоративные",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 6.0,
+    "images": [
+      "/assets/img/decor-37.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "notions-38",
+    "name": "Фурнитура позиция 38",
     "category": "Фурнитура",
-    "kind": "Аппликации",
-    "print": "Декор",
-    "composition": "Разное",
-    "width_cm": 0,
-    "price_usd": 0.0,
-    "images": ["/assets/placeholder.jpg"]
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 6.5,
+    "images": [
+      "/assets/img/notions-38.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "muslin-39",
+    "name": "Муслин позиция 39",
+    "category": "Муслин",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 7.0,
+    "images": [
+      "/assets/img/muslin-39.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "poplin-40",
+    "name": "Поплин позиция 40",
+    "category": "Поплин",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 2.5,
+    "images": [
+      "/assets/img/poplin-40.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "satin-41",
+    "name": "Сатин позиция 41",
+    "category": "Сатин",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 3.0,
+    "images": [
+      "/assets/img/satin-41.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "flannel-42",
+    "name": "Фланель позиция 42",
+    "category": "Фланель",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 3.5,
+    "images": [
+      "/assets/img/flannel-42.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "duck-43",
+    "name": "Дак позиция 43",
+    "category": "Дак",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 4.0,
+    "images": [
+      "/assets/img/duck-43.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "linens-44",
+    "name": "Линенс позиция 44",
+    "category": "Линенс",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 4.5,
+    "images": [
+      "/assets/img/linens-44.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "knit-45",
+    "name": "Трикотаж позиция 45",
+    "category": "Трикотаж",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 5.0,
+    "images": [
+      "/assets/img/knit-45.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "eco-46",
+    "name": "Эко-ткани позиция 46",
+    "category": "Эко-ткани",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 5.5,
+    "images": [
+      "/assets/img/eco-46.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "dress-47",
+    "name": "Плательные позиция 47",
+    "category": "Плательные",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 6.0,
+    "images": [
+      "/assets/img/dress-47.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "linen-48",
+    "name": "Лён позиция 48",
+    "category": "Лён",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 6.5,
+    "images": [
+      "/assets/img/linen-48.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "tulle-49",
+    "name": "Сетки позиция 49",
+    "category": "Сетки",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 7.0,
+    "images": [
+      "/assets/img/tulle-49.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "denim-50",
+    "name": "Деним позиция 50",
+    "category": "Деним",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 2.5,
+    "images": [
+      "/assets/img/denim-50.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "shirt-51",
+    "name": "Рубашечные позиция 51",
+    "category": "Рубашечные",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 3.0,
+    "images": [
+      "/assets/img/shirt-51.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "velvet-52",
+    "name": "Бархат позиция 52",
+    "category": "Бархат",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 3.5,
+    "images": [
+      "/assets/img/velvet-52.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "silk-53",
+    "name": "Шёлк позиция 53",
+    "category": "Шёлк",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 4.0,
+    "images": [
+      "/assets/img/silk-53.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "pique-54",
+    "name": "Пике позиция 54",
+    "category": "Пике",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 4.5,
+    "images": [
+      "/assets/img/pique-54.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "mahra-55",
+    "name": "Махра позиция 55",
+    "category": "Махра",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 5.0,
+    "images": [
+      "/assets/img/mahra-55.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "decor-56",
+    "name": "Декоративные позиция 56",
+    "category": "Декоративные",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 5.5,
+    "images": [
+      "/assets/img/decor-56.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "notions-57",
+    "name": "Фурнитура позиция 57",
+    "category": "Фурнитура",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 6.0,
+    "images": [
+      "/assets/img/notions-57.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "muslin-58",
+    "name": "Муслин позиция 58",
+    "category": "Муслин",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 6.5,
+    "images": [
+      "/assets/img/muslin-58.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "poplin-59",
+    "name": "Поплин позиция 59",
+    "category": "Поплин",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 7.0,
+    "images": [
+      "/assets/img/poplin-59.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "satin-60",
+    "name": "Сатин позиция 60",
+    "category": "Сатин",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 2.5,
+    "images": [
+      "/assets/img/satin-60.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "flannel-61",
+    "name": "Фланель позиция 61",
+    "category": "Фланель",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 3.0,
+    "images": [
+      "/assets/img/flannel-61.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "duck-62",
+    "name": "Дак позиция 62",
+    "category": "Дак",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 3.5,
+    "images": [
+      "/assets/img/duck-62.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "linens-63",
+    "name": "Линенс позиция 63",
+    "category": "Линенс",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 4.0,
+    "images": [
+      "/assets/img/linens-63.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "knit-64",
+    "name": "Трикотаж позиция 64",
+    "category": "Трикотаж",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 4.5,
+    "images": [
+      "/assets/img/knit-64.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "eco-65",
+    "name": "Эко-ткани позиция 65",
+    "category": "Эко-ткани",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 5.0,
+    "images": [
+      "/assets/img/eco-65.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "dress-66",
+    "name": "Плательные позиция 66",
+    "category": "Плательные",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 5.5,
+    "images": [
+      "/assets/img/dress-66.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "linen-67",
+    "name": "Лён позиция 67",
+    "category": "Лён",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 6.0,
+    "images": [
+      "/assets/img/linen-67.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "tulle-68",
+    "name": "Сетки позиция 68",
+    "category": "Сетки",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 6.5,
+    "images": [
+      "/assets/img/tulle-68.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "denim-69",
+    "name": "Деним позиция 69",
+    "category": "Деним",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 7.0,
+    "images": [
+      "/assets/img/denim-69.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "shirt-70",
+    "name": "Рубашечные позиция 70",
+    "category": "Рубашечные",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 2.5,
+    "images": [
+      "/assets/img/shirt-70.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "velvet-71",
+    "name": "Бархат позиция 71",
+    "category": "Бархат",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 3.0,
+    "images": [
+      "/assets/img/velvet-71.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "silk-72",
+    "name": "Шёлк позиция 72",
+    "category": "Шёлк",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 3.5,
+    "images": [
+      "/assets/img/silk-72.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "pique-73",
+    "name": "Пике позиция 73",
+    "category": "Пике",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 4.0,
+    "images": [
+      "/assets/img/pique-73.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "mahra-74",
+    "name": "Махра позиция 74",
+    "category": "Махра",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 4.5,
+    "images": [
+      "/assets/img/mahra-74.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "decor-75",
+    "name": "Декоративные позиция 75",
+    "category": "Декоративные",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 5.0,
+    "images": [
+      "/assets/img/decor-75.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "notions-76",
+    "name": "Фурнитура позиция 76",
+    "category": "Фурнитура",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 5.5,
+    "images": [
+      "/assets/img/notions-76.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "muslin-77",
+    "name": "Муслин позиция 77",
+    "category": "Муслин",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 6.0,
+    "images": [
+      "/assets/img/muslin-77.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "poplin-78",
+    "name": "Поплин позиция 78",
+    "category": "Поплин",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 6.5,
+    "images": [
+      "/assets/img/poplin-78.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "satin-79",
+    "name": "Сатин позиция 79",
+    "category": "Сатин",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 7.0,
+    "images": [
+      "/assets/img/satin-79.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "flannel-80",
+    "name": "Фланель позиция 80",
+    "category": "Фланель",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 2.5,
+    "images": [
+      "/assets/img/flannel-80.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "duck-81",
+    "name": "Дак позиция 81",
+    "category": "Дак",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 3.0,
+    "images": [
+      "/assets/img/duck-81.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "linens-82",
+    "name": "Линенс позиция 82",
+    "category": "Линенс",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 3.5,
+    "images": [
+      "/assets/img/linens-82.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "knit-83",
+    "name": "Трикотаж позиция 83",
+    "category": "Трикотаж",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 4.0,
+    "images": [
+      "/assets/img/knit-83.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "eco-84",
+    "name": "Эко-ткани позиция 84",
+    "category": "Эко-ткани",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 4.5,
+    "images": [
+      "/assets/img/eco-84.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "dress-85",
+    "name": "Плательные позиция 85",
+    "category": "Плательные",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 5.0,
+    "images": [
+      "/assets/img/dress-85.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "linen-86",
+    "name": "Лён позиция 86",
+    "category": "Лён",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 5.5,
+    "images": [
+      "/assets/img/linen-86.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "tulle-87",
+    "name": "Сетки позиция 87",
+    "category": "Сетки",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 6.0,
+    "images": [
+      "/assets/img/tulle-87.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "denim-88",
+    "name": "Деним позиция 88",
+    "category": "Деним",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 6.5,
+    "images": [
+      "/assets/img/denim-88.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "shirt-89",
+    "name": "Рубашечные позиция 89",
+    "category": "Рубашечные",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 7.0,
+    "images": [
+      "/assets/img/shirt-89.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "velvet-90",
+    "name": "Бархат позиция 90",
+    "category": "Бархат",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 2.5,
+    "images": [
+      "/assets/img/velvet-90.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "silk-91",
+    "name": "Шёлк позиция 91",
+    "category": "Шёлк",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 3.0,
+    "images": [
+      "/assets/img/silk-91.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "pique-92",
+    "name": "Пике позиция 92",
+    "category": "Пике",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 3.5,
+    "images": [
+      "/assets/img/pique-92.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "mahra-93",
+    "name": "Махра позиция 93",
+    "category": "Махра",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 4.0,
+    "images": [
+      "/assets/img/mahra-93.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "decor-94",
+    "name": "Декоративные позиция 94",
+    "category": "Декоративные",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 4.5,
+    "images": [
+      "/assets/img/decor-94.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "notions-95",
+    "name": "Фурнитура позиция 95",
+    "category": "Фурнитура",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 5.0,
+    "images": [
+      "/assets/img/notions-95.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "muslin-96",
+    "name": "Муслин позиция 96",
+    "category": "Муслин",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 5.5,
+    "images": [
+      "/assets/img/muslin-96.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "poplin-97",
+    "name": "Поплин позиция 97",
+    "category": "Поплин",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 6.0,
+    "images": [
+      "/assets/img/poplin-97.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "satin-98",
+    "name": "Сатин позиция 98",
+    "category": "Сатин",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 6.5,
+    "images": [
+      "/assets/img/satin-98.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "flannel-99",
+    "name": "Фланель позиция 99",
+    "category": "Фланель",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 7.0,
+    "images": [
+      "/assets/img/flannel-99.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "duck-100",
+    "name": "Дак позиция 100",
+    "category": "Дак",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 2.5,
+    "images": [
+      "/assets/img/duck-100.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "linens-101",
+    "name": "Линенс позиция 101",
+    "category": "Линенс",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 3.0,
+    "images": [
+      "/assets/img/linens-101.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "knit-102",
+    "name": "Трикотаж позиция 102",
+    "category": "Трикотаж",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 3.5,
+    "images": [
+      "/assets/img/knit-102.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "eco-103",
+    "name": "Эко-ткани позиция 103",
+    "category": "Эко-ткани",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 4.0,
+    "images": [
+      "/assets/img/eco-103.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "dress-104",
+    "name": "Плательные позиция 104",
+    "category": "Плательные",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 4.5,
+    "images": [
+      "/assets/img/dress-104.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "linen-105",
+    "name": "Лён позиция 105",
+    "category": "Лён",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 5.0,
+    "images": [
+      "/assets/img/linen-105.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "tulle-106",
+    "name": "Сетки позиция 106",
+    "category": "Сетки",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 5.5,
+    "images": [
+      "/assets/img/tulle-106.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "denim-107",
+    "name": "Деним позиция 107",
+    "category": "Деним",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 6.0,
+    "images": [
+      "/assets/img/denim-107.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "shirt-108",
+    "name": "Рубашечные позиция 108",
+    "category": "Рубашечные",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 6.5,
+    "images": [
+      "/assets/img/shirt-108.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "velvet-109",
+    "name": "Бархат позиция 109",
+    "category": "Бархат",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 7.0,
+    "images": [
+      "/assets/img/velvet-109.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "silk-110",
+    "name": "Шёлк позиция 110",
+    "category": "Шёлк",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 2.5,
+    "images": [
+      "/assets/img/silk-110.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "pique-111",
+    "name": "Пике позиция 111",
+    "category": "Пике",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 3.0,
+    "images": [
+      "/assets/img/pique-111.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "mahra-112",
+    "name": "Махра позиция 112",
+    "category": "Махра",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 3.5,
+    "images": [
+      "/assets/img/mahra-112.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "decor-113",
+    "name": "Декоративные позиция 113",
+    "category": "Декоративные",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 4.0,
+    "images": [
+      "/assets/img/decor-113.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "notions-114",
+    "name": "Фурнитура позиция 114",
+    "category": "Фурнитура",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 4.5,
+    "images": [
+      "/assets/img/notions-114.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "muslin-115",
+    "name": "Муслин позиция 115",
+    "category": "Муслин",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 5.0,
+    "images": [
+      "/assets/img/muslin-115.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "poplin-116",
+    "name": "Поплин позиция 116",
+    "category": "Поплин",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 5.5,
+    "images": [
+      "/assets/img/poplin-116.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "id": "satin-117",
+    "name": "Сатин позиция 117",
+    "category": "Сатин",
+    "kind": "Классический",
+    "print": "Однотон",
+    "composition": "100% хлопок",
+    "width_cm": "240",
+    "price_usd": 6.0,
+    "images": [
+      "/assets/img/satin-117.jpg"
+    ],
+    "variants": []
   }
 ]
