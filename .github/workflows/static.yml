@@ -33,11 +33,15 @@ jobs:
         uses: actions/checkout@v5
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Create artifact directory
+        run: |
+          mkdir -p artifact
+          cp -r *.html *.css *.js *.json *.xml *.txt *.ico artifact/ 2>/dev/null || true
+          cp -r assets artifact/ 2>/dev/null || true
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          # Upload entire repository
-          path: '.'
+          path: 'artifact'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
